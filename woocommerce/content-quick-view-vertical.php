@@ -13,19 +13,20 @@ $classes[] = 'product-quick-view single-product-content quick-view-vertical';
 
 woodmart_set_loop_prop( 'is_quick_view', 'quick-view' );
 
-?>
-<?php
-	/**
-	 * woocommerce_before_single_product hook
-	 *
-	 * @hooked wc_print_notices - 10
-	 */
-	 do_action( 'woocommerce_before_single_product' );
+/**
+ * woocommerce_before_single_product hook
+ *
+ * @hooked wc_print_notices - 10
+ */
+do_action( 'woocommerce_before_single_product' );
 
-	 if ( post_password_required() ) {
-	 	echo get_the_password_form();
-	 	return;
-	 }
+if ( post_password_required() ) {
+	echo get_the_password_form();
+	return;
+}
+
+woodmart_quick_view_vg_data();
+
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>

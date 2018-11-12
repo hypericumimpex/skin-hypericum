@@ -17,6 +17,7 @@ if( ! function_exists( 'woodmart_generate_posts_slider' )) {
 			'el_class' => '',
 			'posts_query' => '',
 			'highlighted_products' => 0,
+			'products_bordered_grid' => 0,
 			'blog_spacing' => woodmart_get_opt( 'blog_spacing' ),
 			'product_hover'  => woodmart_get_opt( 'products_hover' ),
 			'spacing'  => woodmart_get_opt( 'products_spacing' ),
@@ -83,6 +84,10 @@ if( ! function_exists( 'woodmart_generate_posts_slider' )) {
 
 		if ( $scroll_carousel_init == 'yes' ) {
 			$carousel_classes .= ' scroll-init';
+		}
+
+		if ( $products_bordered_grid && ! $highlighted_products ) {
+			$carousel_classes .= ' products-bordered-grid';	
 		}
 
 		if ( $el_class ) $classes .= ' ' . $el_class;

@@ -56,7 +56,11 @@ class WOODMART_Registry {
     } 
 
     private function _save_object( $obj ) {
-		$objname = 'WOODMART_' . mb_convert_case( $obj, MB_CASE_TITLE, "UTF-8" );
+		if ( function_exists( 'mb_convert_case' ) ) {
+			$objname = 'WOODMART_' . mb_convert_case( $obj, MB_CASE_TITLE, "UTF-8" );
+		} else {
+			$objname = 'WOODMART_' . ucfirst( $obj );
+		}
 		
         if( is_string($obj) && !isset($this->$obj) && class_exists($objname) ) {
             $this->knownObjects[ $obj ] = new $objname;

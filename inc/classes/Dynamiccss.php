@@ -33,6 +33,9 @@ class WOODMART_Dynamiccss {
 		$file = get_option( 'woodmart-dynamic-css-file' );
 
 		if ( isset( $file['url'] ) ) {
+			if ( is_ssl() ) {
+				$file['url'] = str_replace( 'http://', 'https://', $file['url'] );
+			}
 			wp_enqueue_style( 'woodmart-dynamic-style', $file['url'], array( 'bootstrap' ), woodmart_get_theme_info( 'Version' ) );
 		}
 	}

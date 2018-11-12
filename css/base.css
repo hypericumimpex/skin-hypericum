@@ -2520,7 +2520,7 @@ table {
 
 .copyrights-wrapper {
   border-top: 1px solid; }
-  .color-scheme-light .copyrights-wrapper {
+  .color-scheme-light .copyrights-wrapper, .woodmart-dark .copyrights-wrapper {
     border-color: rgba(255, 255, 255, 0.1); }
 
 .min-footer {
@@ -5136,8 +5136,8 @@ input:focus:-webkit-autofill {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     border-bottom: 1px solid; }
-  .color-scheme-light .share-with-lines .woodmart-social-icon a, .woodmart-dark .share-with-lines .woodmart-social-icon a {
-    color: white;
+  .color-scheme-light .share-with-lines .woodmart-social-icons a, .woodmart-dark .share-with-lines .woodmart-social-icons a {
+    color: white !important;
     border: 2px solid rgba(255, 255, 255, 0.4); }
 
 .blog-design-small-images:not(.blog-style-flat) .post-gallery-slider .owl-nav > div[class*="next"] {
@@ -5349,6 +5349,8 @@ input:focus:-webkit-autofill {
 .blog-design-mask:hover .article-body-container {
   -webkit-box-shadow: none;
           box-shadow: none; }
+.blog-design-mask .color-scheme-light .post-gallery-slider .owl-nav, .woodmart-dark .blog-design-mask .post-gallery-slider .owl-nav {
+  background-color: #101010; }
 
 .post-slide {
   margin-bottom: 0 !important; }
@@ -6249,7 +6251,7 @@ div.woodmart-portfolio-holder {
       width: 15px;
       height: 2px;
       display: inline-block;
-      background-color: #2d2a2a;
+      background-color: currentColor;
       -webkit-transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out,  width 0.2s ease-in-out;
       -webkit-transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
@@ -8452,6 +8454,8 @@ body .woodmart-bg-center-bottom > .vc_column-inner {
 
 [data-hide_pagination_control="no"] .owl-carousel:not(.owl-loaded) {
   padding-bottom: 41px !important; }
+[data-hide_pagination_control="no"] .owl-carousel.woodmart-slider {
+  padding-bottom: 0px !important; }
 
 .owl-loaded:after, .owl-loaded:before {
   content: "";
@@ -9151,8 +9155,7 @@ a.pswp__share--download:hover {
   border-width: 0 5px 5px;
   border-bottom-color: #000; }
 
-.icl_post_in_other_langs,
-.wpml-ls-statics-post_translations {
+.icl_post_in_other_langs, .wpml-ls-statics-post_translations {
   margin-top: 25px;
   padding-top: 20px;
   border-top: 1px solid; }
@@ -9909,11 +9912,9 @@ div.wpcf7-response-output {
   .title-wrapper.text-right .title-after_title,
   .title-wrapper.text-right .title-subtitle {
     margin-left: auto; }
-  .title-wrapper .color-scheme-light .title,
-  .title-wrapper .woodmart-dark .title {
+  .color-scheme-light .title-wrapper .title, .woodmart-dark .title-wrapper .title {
     color: white; }
-  .title-wrapper .color-scheme-light .title-after_title,
-  .title-wrapper .woodmart-dark .title-after_title {
+  .color-scheme-light .title-wrapper .title-after_title, .woodmart-dark .title-wrapper .title-after_title {
     color: rgba(255, 255, 255, 0.8); }
 
 .woodmart-title-size-small .title-subtitle {
@@ -11827,14 +11828,10 @@ div.wpcf7-response-output {
   .color-scheme-light .woodmart-price-table .woodmart-plan-title, .woodmart-dark .woodmart-price-table .woodmart-plan-title {
     color: white; }
   .color-scheme-light .woodmart-price-table .woodmart-plan-inner, .woodmart-dark .woodmart-price-table .woodmart-plan-inner {
-    border-color: rgba(255, 255, 255, 0.15);
     background-color: rgba(0, 0, 0, 0.3); }
   .color-scheme-light .woodmart-price-table .woodmart-price-suffix, .woodmart-dark .woodmart-price-table .woodmart-price-suffix {
     color: rgba(255, 255, 255, 0.6); }
-  .color-scheme-light .woodmart-price-table .woodmart-plan-features, .woodmart-dark .woodmart-price-table .woodmart-plan-features {
-    border-color: rgba(255, 255, 255, 0.15); }
   .color-scheme-light .woodmart-price-table .woodmart-plan-feature, .woodmart-dark .woodmart-price-table .woodmart-plan-feature {
-    border-color: rgba(255, 255, 255, 0.15);
     color: rgba(255, 255, 255, 0.8); }
 
 .woodmart-menu-price {
@@ -12001,6 +11998,8 @@ div.wpcf7-response-output {
   .woodmart-timeline-item .woodmart-timeline-image {
     display: inline-block;
     overflow: hidden; }
+    .browser-Internet .woodmart-timeline-item .woodmart-timeline-image img {
+      width: 100%; }
   .woodmart-timeline-item .woodmart-timeline-title,
   .woodmart-timeline-item .woodmart-timeline-content,
   .woodmart-timeline-item .woodmart-timeline-image {
@@ -12765,17 +12764,14 @@ div.wpcf7-response-output {
   padding-top: 200px; }
 
 body .wp-playlist-item, .autocomplete-suggestion, .view-all-results, .woodmart-search-full-screen .searchform, .copyrights-wrapper, .mobile-nav .create-nav-msg, .comments-area .comment, .comments-area .children, .comments-area .logged-in-as > a:not(:last-child), .share-with-lines > span, .widget, .mobile-menu-widget, .widget-heading, .woodmart-recent-posts li, .widget_rss ul li, .widget_tag_cloud .tagcloud a,
-.widget_product_tag_cloud .tagcloud a, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .icl_post_in_other_langs,
-.wpml-ls-statics-post_translations, .woodmart-title-style-bordered .left-line,
+.widget_product_tag_cloud .tagcloud a, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .icl_post_in_other_langs, .wpml-ls-statics-post_translations, .woodmart-title-style-bordered .left-line,
 .woodmart-title-style-bordered .right-line, .woodmart-twitter-element .twitter-post, .woodmart-price-table .woodmart-plan-inner, .woodmart-price-table .woodmart-plan-features, .woodmart-price-table .woodmart-plan-feature, .woodmart-price-table.price-style-alt .woodmart-plan-price {
   border-color: rgba(129, 129, 129, 0.2); }
-  .woodmart-dark body .wp-playlist-item, body .woodmart-dark .wp-playlist-item, .woodmart-dark .autocomplete-suggestion, .woodmart-dark .view-all-results, .woodmart-dark .woodmart-search-full-screen .searchform, .woodmart-search-full-screen .woodmart-dark .searchform, .woodmart-dark .copyrights-wrapper, .woodmart-dark .mobile-nav .create-nav-msg, .mobile-nav .woodmart-dark .create-nav-msg, .woodmart-dark .comments-area .comment, .comments-area .woodmart-dark .comment, .woodmart-dark .comments-area .children, .comments-area .woodmart-dark .children, .woodmart-dark .comments-area .logged-in-as > a:not(:last-child), .comments-area .woodmart-dark .logged-in-as > a:not(:last-child), .woodmart-dark .share-with-lines > span, .woodmart-dark .widget, .woodmart-dark .mobile-menu-widget, .woodmart-dark .widget-heading, .woodmart-dark .woodmart-recent-posts li, .woodmart-recent-posts .woodmart-dark li, .woodmart-dark .widget_rss ul li, .widget_rss ul .woodmart-dark li, .woodmart-dark .widget_tag_cloud .tagcloud a, .widget_tag_cloud .tagcloud .woodmart-dark a,
-  .woodmart-dark .widget_product_tag_cloud .tagcloud a,
-  .widget_product_tag_cloud .tagcloud .woodmart-dark a, .woodmart-dark .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .woodmart-dark .vc_tta-panel, .woodmart-dark .icl_post_in_other_langs,
-  .woodmart-dark .wpml-ls-statics-post_translations, .woodmart-dark .woodmart-title-style-bordered .left-line, .woodmart-title-style-bordered .woodmart-dark .left-line,
-  .woodmart-dark .woodmart-title-style-bordered .right-line,
-  .woodmart-title-style-bordered .woodmart-dark .right-line, .woodmart-dark .woodmart-twitter-element .twitter-post, .woodmart-twitter-element .woodmart-dark .twitter-post, .woodmart-dark .woodmart-price-table .woodmart-plan-inner, .woodmart-price-table .woodmart-dark .woodmart-plan-inner, .woodmart-dark .woodmart-price-table .woodmart-plan-features, .woodmart-price-table .woodmart-dark .woodmart-plan-features, .woodmart-dark .woodmart-price-table .woodmart-plan-feature, .woodmart-price-table .woodmart-dark .woodmart-plan-feature, .woodmart-dark .woodmart-price-table.price-style-alt .woodmart-plan-price, .woodmart-price-table.price-style-alt .woodmart-dark .woodmart-plan-price {
-    border-color: rgba(255, 255, 255, 0.15); }
+
+body.woodmart-dark .wp-playlist-item, .color-scheme-light .autocomplete-suggestion, .woodmart-dark .autocomplete-suggestion, .woodmart-dark .view-all-results, .woodmart-dark .comments-area .comment,
+.woodmart-dark .comments-area .children, .woodmart-dark .comments-area .logged-in-as > a:not(:last-child), .color-scheme-light .share-with-lines > span, .woodmart-dark .share-with-lines > span, .woodmart-dark .mobile-menu-widget, .woodmart-dark .widget-heading, .wpb-js-composer.woodmart-dark .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .woodmart-dark .icl_post_in_other_langs,
+.woodmart-dark .wpml-ls-statics-post_translations, .woodmart-dark .woodmart-twitter-element .twitter-post, .color-scheme-light .woodmart-price-table .woodmart-plan-inner, .woodmart-dark .woodmart-price-table .woodmart-plan-inner, .color-scheme-light .woodmart-price-table .woodmart-plan-features, .woodmart-dark .woodmart-price-table .woodmart-plan-features, .color-scheme-light .woodmart-price-table .woodmart-plan-feature, .woodmart-dark .woodmart-price-table .woodmart-plan-feature, .woodmart-dark .woodmart-price-table.price-style-alt .woodmart-plan-price {
+  border-color: rgba(255, 255, 255, 0.15); }
 
 a:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, blockquote footer:before, blockquote cite,
 blockquote cite a, .color-scheme-dark a:hover, .color-primary, .woodmart-dark .color-primary, .btn-style-bordered.btn-color-primary, .mega-menu-list > li > a:hover, .mega-menu-list .sub-sub-menu li a:hover, .site-mobile-menu li.current-menu-item > a, .site-mobile-menu .sub-menu li.current-menu-item > a, .dropdowns-color-light .site-mobile-menu li.current-menu-item > a, .dropdowns-color-light .site-mobile-menu .sub-menu li.current-menu-item > a, .comments-area .reply a, .comments-area .reply a:hover, .comments-area .logged-in-as > a:hover, .blog-post-loop .entry-title a:hover, .read-more-section a, .read-more-section a:hover, .single-post-navigation .blog-posts-nav-btn a:hover, .error404 .page-title, .not-found .entry-header:before, .subtitle-color-primary.subtitle-style-default, .woodmart-title-color-primary .subtitle-style-default, .instagram-widget .clear a:hover, .box-icon-wrapper.box-with-text, .woodmart-price-table.price-style-alt .woodmart-price-currency, .woodmart-price-table.price-style-alt .woodmart-price-value, .woodmart-menu-price.cursor-pointer:hover .menu-price-title, .woodmart-menu-price.cursor-pointer:focus .menu-price-title, .hotspot-icon-alt .hotspot-btn:after, .whb-color-dark .navigation-style-default .item-level-0:hover > a, .whb-color-dark .navigation-style-default .item-level-0.current-menu-item > a, .navigation-style-default .menu-mega-dropdown .color-scheme-dark .sub-menu > li > a:hover, .navigation-style-separated .menu-mega-dropdown .color-scheme-dark .sub-menu > li > a:hover, .navigation-style-bordered .menu-mega-dropdown .color-scheme-dark .sub-menu > li > a:hover, .vertical-navigation .menu-mega-dropdown .sub-menu > li > a:hover, .navigation-style-default .menu-mega-dropdown .color-scheme-dark .sub-sub-menu li a:hover, .navigation-style-separated .menu-mega-dropdown .color-scheme-dark .sub-sub-menu li a:hover, .navigation-style-bordered .menu-mega-dropdown .color-scheme-dark .sub-sub-menu li a:hover, .vertical-navigation .menu-mega-dropdown .sub-sub-menu li a:hover {
@@ -12860,8 +12856,6 @@ legend, .element-title, .comments-area .comments-title,
 
 .woodmart-dark .widget-heading .close-side-widget {
   color: white; }
-  .woodmart-dark .widget-heading .close-side-widget:after, .woodmart-dark .widget-heading .close-side-widget:before {
-    background-color: white; }
 
 .platform-Windows .woodmart-search-opened .header-banner, .platform-Windows .full-screen-menu-open .header-banner,
 .platform-Windows .woodmart-search-opened .whb-row,
@@ -13334,7 +13328,7 @@ aside.sidebar-container.show-hidden-sidebar, .mobile-nav.act-mobile-menu {
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white));
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
 
-.woodmart-dark .portfolio-filter:after, .woodmart-dark .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs .vc_tta-tabs-container:after, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs .woodmart-dark .vc_tta-tabs-container:after {
+.woodmart-dark .portfolio-filter:after {
   background: -webkit-gradient(linear, left top, right top, from(rgba(26, 26, 26, 0)), to(#1a1a1a));
   background: linear-gradient(to right, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%); }
 
@@ -13885,7 +13879,7 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
   -webkit-box-shadow: none;
           box-shadow: none; }
 
-.btns-accent-3d .main-nav .item-level-0.callto-btn > a, .btns-accent-3d .comment-form .submit, .btns-accent-3d .post-password-form input[type=submit], .btns-accent-3d .cookies-buttons .cookies-accept-btn, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-3d .mc4wp-form input[type=submit], .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-3d #yith-wpv-abuse, .btns-accent-3d div.wcmp_regi_main .button {
+.btns-accent-3d .main-nav .item-level-0.callto-btn > a, .btns-accent-3d .comment-form .submit, .btns-accent-3d .post-password-form input[type=submit], .btns-accent-3d .cookies-buttons .cookies-accept-btn, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-3d .mc4wp-form input[type=submit], .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-3d #yith-wpv-abuse, .btns-accent-3d iv.wcmp_regi_main .button {
   border: none;
   -webkit-box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
           box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
@@ -13894,30 +13888,30 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease,  -webkit-box-shadow 0s ease;
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, box-shadow 0s ease,  opacity 0.25s ease;
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, box-shadow 0s ease,  opacity 0.25s ease,  -webkit-box-shadow 0s ease; }
-  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-3d .comment-form .submit:hover, .btns-accent-3d .post-password-form input[type=submit]:hover, .btns-accent-3d .cookies-buttons .cookies-accept-btn:hover, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-3d .mc4wp-form input[type=submit]:hover, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-3d #yith-wpv-abuse:hover, .btns-accent-3d div.wcmp_regi_main .button:hover {
+  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-3d .comment-form .submit:hover, .btns-accent-3d .post-password-form input[type=submit]:hover, .btns-accent-3d .cookies-buttons .cookies-accept-btn:hover, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-3d .mc4wp-form input[type=submit]:hover, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-3d #yith-wpv-abuse:hover, .btns-accent-3d iv.wcmp_regi_main .button:hover {
     -webkit-box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
             box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15); }
-  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:active, .btns-accent-3d .comment-form .submit:active, .btns-accent-3d .post-password-form input[type=submit]:active, .btns-accent-3d .cookies-buttons .cookies-accept-btn:active, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit:active, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit-btn:active, .btns-accent-3d .mc4wp-form input[type=submit]:active, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:active, .btns-accent-3d #yith-wpv-abuse:active, .btns-accent-3d div.wcmp_regi_main .button:active {
+  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:active, .btns-accent-3d .comment-form .submit:active, .btns-accent-3d .post-password-form input[type=submit]:active, .btns-accent-3d .cookies-buttons .cookies-accept-btn:active, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit:active, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit-btn:active, .btns-accent-3d .mc4wp-form input[type=submit]:active, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:active, .btns-accent-3d #yith-wpv-abuse:active, .btns-accent-3d iv.wcmp_regi_main .button:active {
     -webkit-box-shadow: none;
             box-shadow: none;
     top: 1px; }
 
-.btns-accent-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-rounded .comment-form .submit, .btns-accent-rounded .post-password-form input[type=submit], .btns-accent-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-rounded div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-rounded div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-rounded .mc4wp-form input[type=submit], .btns-accent-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-rounded #yith-wpv-abuse, .btns-accent-rounded div.wcmp_regi_main .button {
+.btns-accent-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-rounded .comment-form .submit, .btns-accent-rounded .post-password-form input[type=submit], .btns-accent-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-rounded iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-rounded iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-rounded .mc4wp-form input[type=submit], .btns-accent-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-rounded #yith-wpv-abuse, .btns-accent-rounded iv.wcmp_regi_main .button {
   border-radius: 35px; }
 
-.btns-accent-semi-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-semi-rounded .comment-form .submit, .btns-accent-semi-rounded .post-password-form input[type=submit], .btns-accent-semi-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-semi-rounded div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-semi-rounded div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-semi-rounded .mc4wp-form input[type=submit], .btns-accent-semi-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-semi-rounded #yith-wpv-abuse, .btns-accent-semi-rounded div.wcmp_regi_main .button {
+.btns-accent-semi-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-semi-rounded .comment-form .submit, .btns-accent-semi-rounded .post-password-form input[type=submit], .btns-accent-semi-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-semi-rounded iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-semi-rounded iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-semi-rounded .mc4wp-form input[type=submit], .btns-accent-semi-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-semi-rounded #yith-wpv-abuse, .btns-accent-semi-rounded iv.wcmp_regi_main .button {
   border-radius: 5px; }
 
-.btns-accent-light .main-nav .item-level-0.callto-btn > a, .btns-accent-light .comment-form .submit, .btns-accent-light .post-password-form input[type=submit], .btns-accent-light .cookies-buttons .cookies-accept-btn, .btns-accent-light div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-light div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-light .mc4wp-form input[type=submit], .btns-accent-light .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-light #yith-wpv-abuse, .btns-accent-light div.wcmp_regi_main .button {
+.btns-accent-light .main-nav .item-level-0.callto-btn > a, .btns-accent-light .comment-form .submit, .btns-accent-light .post-password-form input[type=submit], .btns-accent-light .cookies-buttons .cookies-accept-btn, .btns-accent-light iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-light iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-light .mc4wp-form input[type=submit], .btns-accent-light .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-light #yith-wpv-abuse, .btns-accent-light iv.wcmp_regi_main .button {
   color: white; }
 
-.btns-accent-hover-light .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-light .comment-form .submit:hover, .btns-accent-hover-light .post-password-form input[type=submit]:hover, .btns-accent-hover-light .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-light div.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-light div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-light .mc4wp-form input[type=submit]:hover, .btns-accent-hover-light .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-light #yith-wpv-abuse:hover, .btns-accent-hover-light div.wcmp_regi_main .button:hover {
+.btns-accent-hover-light .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-light .comment-form .submit:hover, .btns-accent-hover-light .post-password-form input[type=submit]:hover, .btns-accent-hover-light .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-light iv.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-light iv.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-light .mc4wp-form input[type=submit]:hover, .btns-accent-hover-light .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-light #yith-wpv-abuse:hover, .btns-accent-hover-light iv.wcmp_regi_main .button:hover {
   color: white; }
 
-.btns-accent-dark .main-nav .item-level-0.callto-btn > a, .btns-accent-dark .comment-form .submit, .btns-accent-dark .post-password-form input[type=submit], .btns-accent-dark .cookies-buttons .cookies-accept-btn, .btns-accent-dark div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-dark div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-dark .mc4wp-form input[type=submit], .btns-accent-dark .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-dark #yith-wpv-abuse, .btns-accent-dark div.wcmp_regi_main .button {
+.btns-accent-dark .main-nav .item-level-0.callto-btn > a, .btns-accent-dark .comment-form .submit, .btns-accent-dark .post-password-form input[type=submit], .btns-accent-dark .cookies-buttons .cookies-accept-btn, .btns-accent-dark iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-dark iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-dark .mc4wp-form input[type=submit], .btns-accent-dark .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-dark #yith-wpv-abuse, .btns-accent-dark iv.wcmp_regi_main .button {
   color: #333333; }
 
-.btns-accent-hover-dark .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-dark .comment-form .submit:hover, .btns-accent-hover-dark .post-password-form input[type=submit]:hover, .btns-accent-hover-dark .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-dark div.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-dark div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-dark .mc4wp-form input[type=submit]:hover, .btns-accent-hover-dark .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-dark #yith-wpv-abuse:hover, .btns-accent-hover-dark div.wcmp_regi_main .button:hover {
+.btns-accent-hover-dark .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-dark .comment-form .submit:hover, .btns-accent-hover-dark .post-password-form input[type=submit]:hover, .btns-accent-hover-dark .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-dark iv.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-dark iv.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-dark .mc4wp-form input[type=submit]:hover, .btns-accent-hover-dark .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-dark #yith-wpv-abuse:hover, .btns-accent-hover-dark iv.wcmp_regi_main .button:hover {
   color: #333333; }
 
 @media (min-width: 1025px) {
@@ -14563,20 +14557,27 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
       font-size: 12px;
       line-height: 12px; }
 
-  .woodmart-slider .owl-nav > div[class*="prev"], .woodmart-slider .owl-nav > div[class*="next"] {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
   .woodmart-slider .owl-nav > div[class*="prev"] {
     padding-left: 0; }
   .woodmart-slider .owl-nav > div[class*="next"] {
     padding-right: 0; }
+
+  .arrows-style-1 .owl-nav > div[class*="prev"] {
+    left: 0px; }
+  .arrows-style-1 .owl-nav > div[class*="next"] {
+    right: 0px; }
 
   .arrows-style-2 .owl-nav > div,
   .arrows-style-3 .owl-nav > div {
     width: 40px;
     height: 40px;
     margin-top: -20px; }
+    .arrows-style-2 .owl-nav > div[class*="prev"], .arrows-style-2 .owl-nav > div[class*="next"],
+    .arrows-style-3 .owl-nav > div[class*="prev"],
+    .arrows-style-3 .owl-nav > div[class*="next"] {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .arrows-style-2 .owl-nav > div:after,
     .arrows-style-3 .owl-nav > div:after {
       font-size: 14px;
@@ -14656,6 +14657,10 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
 
   .banner-hide-btn-tablet {
     display: none !important; } }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reset-margin-tablet > .vc_column-inner {
+    margin-left: 0 !important;
+    margin-right: 0 !important; } }
 @media (max-width: 991px) {
   .woodmart-title-width-70 .woodmart-title-container,
   .woodmart-title-width-70 .title-after_title,
@@ -15176,7 +15181,8 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
     background-image: none !important; }
 
   body .reset-element-margin,
-  .reset-margin > .vc_column-inner {
+  .reset-margin > .vc_column-inner,
+  .reset-margin-mobile > .vc_column-inner {
     margin-left: 0 !important;
     margin-right: 0 !important; }
 

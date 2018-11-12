@@ -236,7 +236,7 @@ class WOODMART_Import {
 
 			if( $sequence && $type == 'version' ) $this->_process = array('xml', 'sliders', 'page_menu', 'wood_slider');
 			if( $sequence && ( $type == 'shop' || $type == 'product' ) ) $this->_process = array();
-			if( $sequence && $version == 'base' ) $this->_process = array('xml', 'home', 'shop', 'menu', 'widgets', 'options', 'sliders', 'before', 'after', 'headers');
+			if( $sequence && $version == 'base' ) $this->_process = array('xml', 'home', 'shop', 'menu', 'widgets', 'options', 'sliders', 'wood_slider', 'before', 'after', 'headers');
 			
 			if( $sequence && $type == 'extras' ) $this->_process = array( 'extras' );
 

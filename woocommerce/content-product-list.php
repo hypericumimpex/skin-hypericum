@@ -47,6 +47,11 @@
 			?>
 			<?php woocommerce_template_single_excerpt(); ?>
 			<?php woodmart_swatches_list(); ?>
+
+			<?php if ( woodmart_loop_prop( 'progress_bar' ) ): ?>
+				<?php woodmart_stock_progress_bar(); ?>
+			<?php endif ?>
+
 			<?php if ( woodmart_loop_prop( 'timer' ) ): ?>
 				<?php woodmart_product_sale_countdown(); ?>
 			<?php endif ?>

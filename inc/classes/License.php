@@ -96,7 +96,25 @@ class WOODMART_License {
 
         if( isset( $_GET['xtemos_debug'] ) ) ar($response);
 
-     
+        $response_code = wp_remote_retrieve_response_code( $response );
+
+        if( $response_code != '200' ) {
+            $this->_notices->add_error('API request call error. Contact your server providers and ask to update OpenSSL system library to the 1.0+ version.');
+            return;
+        }
+
+        $data = json_decode( wp_remote_retrieve_body($response), true );
+
+        if( isset( $data['error'] ) ) {
+            $this->_notices->add_error( $data['error'] );
+            return;
+        } 
+
+        if( ! $data['verified'] ) {
+            $this->_notices->add_error( 'The purchase code is invalid. <a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-">Where can I get my purchase code?</a>' );
+            return;
+        } 
+
         $this->activate( $code, $data['token'] );
 
         $this->_notices->add_success( 'The license is verified and theme is activated successfully. Auto updates function is enabled.' );
@@ -166,7 +184,6 @@ class WOODMART_License {
 
 
     protected function check_for_update() {
-		return;//NULLED		 
         $force = false;
 
         if( isset( $_GET['force-check'] ) && $_GET['force-check'] == '1') $force = true;

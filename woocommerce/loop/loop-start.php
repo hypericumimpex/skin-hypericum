@@ -7,19 +7,24 @@
  * @version     3.3.0
  */
 
-$spacing = woodmart_get_opt( 'products_spacing' );
-$class   = '';
+$spacing      = woodmart_get_opt( 'products_spacing' );
+$class        = '';
+$is_list_view = woodmart_loop_prop( 'products_view' ) == 'list';
 
-if( woodmart_loop_prop( 'products_masonry' ) ) {
+if ( woodmart_loop_prop( 'products_masonry' ) ) {
 	$class .= ' grid-masonry';
 	woodmart_enqueue_script( 'isotope' );
 	woodmart_enqueue_script( 'woodmart-packery-mode' );
 }
 
-if ( woodmart_get_shop_view() == 'list' ) {
+if ( $is_list_view ) {
 	$class .= ' elements-list';
-}else{
+} else {
 	$class .= ' woodmart-spacing-' . $spacing;
+}
+
+if ( woodmart_get_opt( 'products_bordered_grid' ) ) {
+	$class .= ' products-bordered-grid';
 }
 
 $class .= ' pagination-' . woodmart_get_opt( 'shop_pagination' );

@@ -160,9 +160,23 @@ return apply_filters( 'woodmart_css_parts', array(
 		'parent' => 'wc-modules',
 		'checked' => true
 	),
+	'bordered-prod' => array(
+		'id' => 'bordered-prod',
+		'title' => 'Bordered product',
+		'section' => 'WooCommerce styles',
+		'parent' => 'wc-modules',
+		'checked' => true
+	),
 	'filter-area' => array(
 		'id' => 'filter-area',
 		'title' => 'Filters area',
+		'section' => 'WooCommerce styles',
+		'parent' => 'wc-modules',
+		'checked' => true
+	),
+	'layered-nav-widget' => array(
+		'id' => 'layered-nav-widget',
+		'title' => 'Layered Nav Widget',
 		'section' => 'WooCommerce styles',
 		'parent' => 'wc-modules',
 		'checked' => true
@@ -171,14 +185,14 @@ return apply_filters( 'woodmart_css_parts', array(
 		'id' => 'el-brand',
 		'title' => 'Brands',
 		'section' => 'WooCommerce styles',
-		'parent' => 'wc-elements',
+		'parent' => 'wpbakery',
 		'checked' => true
 	),
 	'el-product-tabs' => array(
 		'id' => 'el-product-tabs',
 		'title' => 'Product tabs',
 		'section' => 'WooCommerce styles',
-		'parent' => 'wc-elements',
+		'parent' => 'wpbakery',
 		'checked' => true
 	),
 	'wc-plugins' => array(

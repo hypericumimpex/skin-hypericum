@@ -25,6 +25,7 @@ if ( $related_products ) : ?>
 				$slider_args = array(
 					'slides_per_view' => ( woodmart_get_opt( 'related_product_columns' ) ) ? woodmart_get_opt( 'related_product_columns' ) : apply_filters( 'woodmart_related_products_per_view', 4 ),
 					'img_size' => 'woocommerce_thumbnail',
+					'products_bordered_grid' => woodmart_get_opt( 'products_bordered_grid' ),
 					'custom_sizes' => apply_filters( 'woodmart_product_related_custom_sizes', false )
 				);
 

@@ -82,6 +82,7 @@ if( $different_sizes && in_array( $woocommerce_loop, woodmart_get_wide_items_arr
 
 if( ! $is_slider ){
 	$classes[] = woodmart_get_grid_el_class( $woocommerce_loop , $products_columns, $different_sizes, $xs_size );
+	$classes[] = 'product-in-grid';
 }else{
 	$classes[] = 'product-in-carousel';
 }

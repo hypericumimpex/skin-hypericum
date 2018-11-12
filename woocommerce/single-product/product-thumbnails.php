@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     3.3.2
+ * @version     3.5.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ if( $product_design == 'sticky' ) {
 	$thums_position = 'bottom';
 }
 
-if ( $attachment_ids && has_post_thumbnail() ) {
+if ( $attachment_ids && $product->get_image_id() ) {
 	foreach ( $attachment_ids as $attachment_id ) {
 		$full_size_image  = wp_get_attachment_image_src( $attachment_id, 'full' );
 		$thumbnail        = wp_get_attachment_image_src( $attachment_id, 'woocommerce_thumbnail' );

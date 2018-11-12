@@ -40,5 +40,12 @@
         "background-color": "#092143"
     },
     "footer-style": "light",
-    "footer-layout": "1"
+    "footer-layout": "1",
+    "advanced_typography": {
+        "0": {
+            "selector": ["product_category_title"],
+            "google": "0",
+            "font-size": "16"
+        }
+    }
 }

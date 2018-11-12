@@ -182,7 +182,7 @@ class WOODMART_Cssgenerator {
 				<h3>Custom CSS file is <span>generated</span></h3>
 
 				<?php 
-					$data = get_file_data($file['url'], array('Version' => 'Version') );
+					$data = get_file_data($file['file'], array('Version' => 'Version') );
 				?>
 
 				<table>

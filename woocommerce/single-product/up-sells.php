@@ -40,7 +40,8 @@ if ( $upsells ) : ?>
 					'slides_per_view' => ( woodmart_get_opt( 'related_product_columns' ) ) ? woodmart_get_opt( 'related_product_columns' ) : apply_filters( 'woodmart_cross_sells_products_per_view', 4 ),
 					'hide_pagination_control' => false,
 					'img_size' => 'woocommerce_thumbnail',
-				'custom_sizes' => apply_filters( 'woodmart_cross_sells_custom_sizes', false )
+					'products_bordered_grid' => woodmart_get_opt( 'products_bordered_grid' ),
+					'custom_sizes' => apply_filters( 'woodmart_cross_sells_custom_sizes', false )
 				);
 
 				echo woodmart_generate_posts_slider( $slider_args, false, $upsells );

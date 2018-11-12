@@ -1,4 +1,5 @@
-<?php if ( ! defined("WOODMART_THEME_DIR")) exit("No direct script access allowed");
+<?php if ( ! defined( 'WOODMART_THEME_DIR' ) ) {
+	exit( 'No direct script access allowed' );}
 
 /**
  * ------------------------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ $template = '
                     <div class="whb-column whb-col-right whb-visible-lg">
                         <%.woodmart-header-links%>
                         <%.search-button%>
-                        <%.whb-wishlist-icon%>
+                        <%.woodmart-wishlist-info-widget%>
                         <%.woodmart-shopping-cart%>
                         <%.full-screen-burger-icon%>
                     </div>

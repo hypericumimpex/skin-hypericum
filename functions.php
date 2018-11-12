@@ -19,9 +19,8 @@ define( 'WOODMART_FRAMEWORK', 		'/inc' );
 define( 'WOODMART_DUMMY', 			WOODMART_THEME_DIR . '/inc/dummy-content' );
 define( 'WOODMART_CLASSES', 		WOODMART_THEMEROOT . '/inc/classes' );
 define( 'WOODMART_CONFIGS', 		WOODMART_THEMEROOT . '/inc/configs' );
-define( 'WOODMART_3D', 				WOODMART_FRAMEWORK . '/third-party' );
 define( 'WOODMART_HEADER_BUILDER',  WOODMART_THEME_DIR . '/inc/header-builder' );
-define( 'WOODMART_ASSETS', 			WOODMART_THEME_DIR . '/inc/assets' );
+define( 'WOODMART_ASSETS', 			WOODMART_THEME_DIR . '/inc/admin/assets' );
 define( 'WOODMART_ASSETS_IMAGES', 	WOODMART_ASSETS    . '/images' );
 define( 'WOODMART_API_URL', 		'https://xtemos.com/licenses/api/' );
 define( 'WOODMART_DEMO_URL', 		'https://woodmart.xtemos.com/' );
@@ -35,7 +34,27 @@ define( 'WOODMART_SLUG', 			'woodmart' );
  * Load all CORE Classes and files
  * ------------------------------------------------------------------------------------------------
  */
-require_once( get_parent_theme_file_path( WOODMART_FRAMEWORK . '/autoload.php') );
+
+if( ! function_exists( 'woodmart_autoload' ) ) {
+    function woodmart_autoload($className) {
+        $className = ltrim($className, '\\');
+        $fileName  = '';
+        $namespace = '';
+        if ($lastNsPos = strripos($className, '\\')) {
+            $namespace = substr($className, 0, $lastNsPos);
+            $className = substr($className, $lastNsPos + 1);
+            $fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
+        }
+        $className = str_replace('WOODMART_', '', $className);
+        $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
+        $fileName = WOODMART_CLASSES . DIRECTORY_SEPARATOR . $fileName;
+        if( file_exists( $fileName )) {
+            require $fileName;
+        }
+    }
+
+    spl_autoload_register('woodmart_autoload');
+}
 
 $woodmart_theme = new WOODMART_Theme();
 

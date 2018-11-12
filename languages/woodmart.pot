@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License version 3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Woodmart 3.1.0\n"
+"Project-Id-Version: Woodmart 3.1.1\n"
 "Report-Msgid-Bugs-To: http://xtemos.com\n"
-"POT-Creation-Date: 2018-10-18 11:34:44+00:00\n"
+"POT-Creation-Date: 2018-10-24 09:07:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"

@@ -165,8 +165,8 @@ if( ! class_exists( 'WOODMART_Dashboard' ) ) {
 			$file = get_option( 'woodmart-generated-css-file' );
 			$theme_version = woodmart_get_theme_info( 'Version' );
 			
-			if ( isset( $file['url'] ) ) {
-				$data = get_file_data( $file['url'], array( 'Version' => 'Version' ) );
+			if ( isset( $file['file'] ) ) {
+				$data = get_file_data( $file['file'], array( 'Version' => 'Version' ) );
 
 				if ( version_compare( $data['Version'], $theme_version, '<' ) ) {
 					$this->_notices->add_msg( 'Your custom generated CSS file is outdated. The current version of the theme is ' . $theme_version . ' so you need to go here and click on "<a href="' . $this->tab_url( 'css' ) . '">Update</a>" button to actualize it.', 'warning', true );

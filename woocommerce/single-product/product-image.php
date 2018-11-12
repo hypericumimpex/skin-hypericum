@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.5.0
+ * @version 3.5.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -44,11 +44,11 @@ $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 
 $post_thumbnail_id = $product->get_image_id();
 $thumbnail_size    = apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' );
 $full_size_image   = wp_get_attachment_image_src( $post_thumbnail_id, $thumbnail_size );
-$placeholder       = has_post_thumbnail() ? 'with-images' : 'without-images';
+$placeholder       = $product->get_image_id() ? 'with-images' : 'without-images';
 $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_classes', array(
 	'woocommerce-product-gallery',
 	'woocommerce-product-gallery--' . $placeholder,
-	'woocommerce-product-gallery--' . ( has_post_thumbnail() ? 'with-images' : 'without-images' ),
+	'woocommerce-product-gallery--' . ( $product->get_image_id() ? 'with-images' : 'without-images' ),
 	'woocommerce-product-gallery--columns-' . absint( $columns ),
 	'images',
 ) );
@@ -85,7 +85,7 @@ if ( version_compare( WC()->version, '3.5.0', '<' ) ) {
 					'class'                   => 'wp-post-image',
 				);
 
-				if ( has_post_thumbnail() ) {
+				if ( $product->get_image_id() ) {
 					$html  = '<div class="product-image-wrap"><figure data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'woocommerce_thumbnail' ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_size_image[0] ) . '">';
 					$html .= get_the_post_thumbnail( $post->ID, $thumb_image_size, $attributes );
 					$html .= '</a></figure></div>';

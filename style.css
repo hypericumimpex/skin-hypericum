@@ -4,7 +4,7 @@ Theme URI: https://github.com/hypericumimpex/skin-hypericum/
 Author: Romeo C.
 Author URI: https://github.com/hypericumimpex
 Description: Tema Hypericum Impex
-Version: 3.1.1
+Version: 3.2
 Text domain: woodmart
 License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -106,6 +106,7 @@ Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor
 10. Widgets
 11. Responsive
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -3252,7 +3253,7 @@ table {
 
 .copyrights-wrapper {
   border-top: 1px solid; }
-  .color-scheme-light .copyrights-wrapper {
+  .color-scheme-light .copyrights-wrapper, .woodmart-dark .copyrights-wrapper {
     border-color: rgba(255, 255, 255, 0.1); }
 
 .min-footer {
@@ -5894,8 +5895,8 @@ input:focus:-webkit-autofill {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     border-bottom: 1px solid; }
-  .color-scheme-light .share-with-lines .woodmart-social-icon a, .woodmart-dark .share-with-lines .woodmart-social-icon a {
-    color: white;
+  .color-scheme-light .share-with-lines .woodmart-social-icons a, .woodmart-dark .share-with-lines .woodmart-social-icons a {
+    color: white !important;
     border: 2px solid rgba(255, 255, 255, 0.4); }
 
 .blog-design-small-images:not(.blog-style-flat) .post-gallery-slider .owl-nav > div[class*="next"] {
@@ -6107,6 +6108,8 @@ input:focus:-webkit-autofill {
 .blog-design-mask:hover .article-body-container {
   -webkit-box-shadow: none;
           box-shadow: none; }
+.blog-design-mask .color-scheme-light .post-gallery-slider .owl-nav, .woodmart-dark .blog-design-mask .post-gallery-slider .owl-nav {
+  background-color: #101010; }
 
 .post-slide {
   margin-bottom: 0 !important; }
@@ -7007,7 +7010,7 @@ div.woodmart-portfolio-holder {
       width: 15px;
       height: 2px;
       display: inline-block;
-      background-color: #2d2a2a;
+      background-color: currentColor;
       -webkit-transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out,  width 0.2s ease-in-out;
       -webkit-transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
@@ -9210,6 +9213,8 @@ body .woodmart-bg-center-bottom > .vc_column-inner {
 
 [data-hide_pagination_control="no"] .owl-carousel:not(.owl-loaded) {
   padding-bottom: 41px !important; }
+[data-hide_pagination_control="no"] .owl-carousel.woodmart-slider {
+  padding-bottom: 0px !important; }
 
 .owl-loaded:after, .owl-loaded:before {
   content: "";
@@ -9923,8 +9928,7 @@ a.pswp__share--download:hover {
   border-width: 0 5px 5px;
   border-bottom-color: #000; }
 
-.icl_post_in_other_langs,
-.wpml-ls-statics-post_translations {
+.icl_post_in_other_langs, .wpml-ls-statics-post_translations {
   margin-top: 25px;
   padding-top: 20px;
   border-top: 1px solid; }
@@ -10681,11 +10685,9 @@ div.wpcf7-response-output {
   .title-wrapper.text-right .title-after_title,
   .title-wrapper.text-right .title-subtitle {
     margin-left: auto; }
-  .title-wrapper .color-scheme-light .title,
-  .title-wrapper .woodmart-dark .title {
+  .color-scheme-light .title-wrapper .title, .woodmart-dark .title-wrapper .title {
     color: white; }
-  .title-wrapper .color-scheme-light .title-after_title,
-  .title-wrapper .woodmart-dark .title-after_title {
+  .color-scheme-light .title-wrapper .title-after_title, .woodmart-dark .title-wrapper .title-after_title {
     color: rgba(255, 255, 255, 0.8); }
 
 .woodmart-title-size-small .title-subtitle {
@@ -12599,14 +12601,10 @@ div.wpcf7-response-output {
   .color-scheme-light .woodmart-price-table .woodmart-plan-title, .woodmart-dark .woodmart-price-table .woodmart-plan-title {
     color: white; }
   .color-scheme-light .woodmart-price-table .woodmart-plan-inner, .woodmart-dark .woodmart-price-table .woodmart-plan-inner {
-    border-color: rgba(255, 255, 255, 0.15);
     background-color: rgba(0, 0, 0, 0.3); }
   .color-scheme-light .woodmart-price-table .woodmart-price-suffix, .woodmart-dark .woodmart-price-table .woodmart-price-suffix {
     color: rgba(255, 255, 255, 0.6); }
-  .color-scheme-light .woodmart-price-table .woodmart-plan-features, .woodmart-dark .woodmart-price-table .woodmart-plan-features {
-    border-color: rgba(255, 255, 255, 0.15); }
   .color-scheme-light .woodmart-price-table .woodmart-plan-feature, .woodmart-dark .woodmart-price-table .woodmart-plan-feature {
-    border-color: rgba(255, 255, 255, 0.15);
     color: rgba(255, 255, 255, 0.8); }
 
 .woodmart-price-table .woodmart-plan-footer .add-to-cart-loop span:not(.woodmart-tooltip-label) {
@@ -12780,6 +12778,8 @@ div.wpcf7-response-output {
   .woodmart-timeline-item .woodmart-timeline-image {
     display: inline-block;
     overflow: hidden; }
+    .browser-Internet .woodmart-timeline-item .woodmart-timeline-image img {
+      width: 100%; }
   .woodmart-timeline-item .woodmart-timeline-title,
   .woodmart-timeline-item .woodmart-timeline-content,
   .woodmart-timeline-item .woodmart-timeline-image {
@@ -13625,8 +13625,9 @@ div.wpcf7-response-output {
   .woodmart-sticky-btn .in-stock:before, .product-image-summary .in-stock:before, .variations_form .in-stock:before, .wishlist_table tr td.product-stock-status span.wishlist-in-stock:before {
     content: "\f109";
     font-family: "woodmart-font"; }
-  .color-scheme-light .woodmart-sticky-btn .in-stock, .woodmart-sticky-btn .color-scheme-light .in-stock, .color-scheme-light .product-image-summary .in-stock, .product-image-summary .color-scheme-light .in-stock, .color-scheme-light .variations_form .in-stock, .variations_form .color-scheme-light .in-stock, .color-scheme-light .wishlist_table tr td.product-stock-status span.wishlist-in-stock, .wishlist_table tr td.product-stock-status .color-scheme-light span.wishlist-in-stock, .woodmart-dark .woodmart-sticky-btn .in-stock, .woodmart-sticky-btn .woodmart-dark .in-stock, .woodmart-dark .product-image-summary .in-stock, .product-image-summary .woodmart-dark .in-stock, .woodmart-dark .variations_form .in-stock, .variations_form .woodmart-dark .in-stock, .woodmart-dark .wishlist_table tr td.product-stock-status span.wishlist-in-stock, .wishlist_table tr td.product-stock-status .woodmart-dark span.wishlist-in-stock {
-    color: white; }
+
+.color-scheme-light .woodmart-sticky-btn .in-stock, .woodmart-dark .woodmart-sticky-btn .in-stock, .color-scheme-light .product-image-summary .in-stock, .woodmart-dark .product-image-summary .in-stock, .color-scheme-light .variations_form .in-stock, .woodmart-dark .variations_form .in-stock, .color-scheme-light .wishlist_table tr td.product-stock-status span.wishlist-in-stock, .woodmart-dark .wishlist_table tr td.product-stock-status span.wishlist-in-stock {
+  color: white; }
 
 .popup-quick-view .entry-summary .product_meta, .meta-location-add_to_cart .product_meta {
   padding-top: 20px;
@@ -13681,16 +13682,12 @@ div.wpcf7-response-output {
   transition: color .25s ease, background-color .25s ease, border-color .25s ease;
   -webkit-transition: color .25s ease, background-color .25s ease, border-color .25s ease; }
 
-.color-scheme-light .widget_product_categories .count, .widget_product_categories .color-scheme-light .count, .color-scheme-light .woodmart-woocommerce-layered-nav .count, .woodmart-woocommerce-layered-nav .color-scheme-light .count,
-.woodmart-dark .widget_product_categories .count,
-.widget_product_categories .woodmart-dark .count,
-.woodmart-dark .woodmart-woocommerce-layered-nav .count,
-.woodmart-woocommerce-layered-nav .woodmart-dark .count {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.8); }
-
 .widget_product_categories .product-categories li a:hover + .count, .widget_product_categories .product-categories li a:focus + .count, .widget_product_categories .product-categories li.current-cat > .count, .woodmart-woocommerce-layered-nav .layered-nav-link:hover + .count, .woodmart-woocommerce-layered-nav .layered-nav-link:focus + .count, .woodmart-woocommerce-layered-nav .chosen .count {
   color: white; }
+
+.color-scheme-light .widget_product_categories .count, .woodmart-dark .widget_product_categories .count, .color-scheme-light .woodmart-woocommerce-layered-nav .count, .woodmart-dark .woodmart-woocommerce-layered-nav .count {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8); }
 
 .color-scheme-light .widget_shopping_cart .cart-item-image:after, .woodmart-dark .widget_shopping_cart .cart-item-image:after, .dropdowns-color-light .dropdown-cart .cart-item-image:after,
 .dropdowns-color-light .cart-widget-side .cart-item-image:after {
@@ -13726,7 +13723,7 @@ div.wpcf7-response-output {
   .color-scheme-light .woodmart-buttons > div a:after, .woodmart-dark .woodmart-buttons > div a:after, .woodmart-hover-button .woodmart-buttons > div a:after, .woodmart-hover-info-alt .woodmart-buttons > div a:after {
     border-color: rgba(255, 255, 255, 0.15);
     border-left-color: white; }
-  .color-scheme-light .woodmart-buttons > div a:hover, .woodmart-dark .woodmart-buttons > div a:hover, .woodmart-hover-button .woodmart-buttons > div a:hover, .woodmart-hover-info-alt .woodmart-buttons > div a:hover, .color-scheme-light .woodmart-buttons > div a:focus, .woodmart-dark .woodmart-buttons > div a:focus, .woodmart-hover-button .woodmart-buttons > div a:focus, .woodmart-hover-info-alt .woodmart-buttons > div a:focus {
+  .color-scheme-light .woodmart-buttons > div a:hover, .woodmart-dark .woodmart-buttons > div a:hover, .woodmart-hover-button .woodmart-buttons > div a:hover, .woodmart-hover-info-alt .woodmart-buttons > div a:hover {
     color: rgba(255, 255, 255, 0.8); }
 .color-scheme-light .woodmart-buttons .woodmart-add-btn .added_to_cart, .woodmart-dark .woodmart-buttons .woodmart-add-btn .added_to_cart, .woodmart-hover-button .woodmart-buttons .woodmart-add-btn .added_to_cart, .woodmart-hover-info-alt .woodmart-buttons .woodmart-add-btn .added_to_cart {
   color: white; }
@@ -14302,7 +14299,8 @@ td.product-total .amount {
       .product-grid-item .woodmart-product-brands-links a:hover,
       .product-grid-item .woodmart-product-brands-links a:focus {
         color: #5c5c5c; }
-  .product-grid-item .woodmart-product-countdown {
+  .product-grid-item .woodmart-product-countdown,
+  .product-grid-item .woodmart-stock-progress-bar {
     margin-top: 10px; }
   .product-grid-item .star-rating {
     margin-bottom: 5px; }
@@ -14509,7 +14507,7 @@ td.product-total .amount {
       width: 12px;
       height: 2px;
       display: inline-block;
-      background-color: black;
+      background-color: currentColor;
       -webkit-transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out,  width 0.2s ease-in-out;
       -webkit-transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
@@ -14535,8 +14533,6 @@ td.product-total .amount {
     background-color: rgba(0, 0, 0, 0.9); }
     .color-scheme-light .quick-shop-wrapper .quick-shop-close, .woodmart-dark .quick-shop-wrapper .quick-shop-close {
       color: white; }
-      .color-scheme-light .quick-shop-wrapper .quick-shop-close:after, .color-scheme-light .quick-shop-wrapper .quick-shop-close:before, .woodmart-dark .quick-shop-wrapper .quick-shop-close:after, .woodmart-dark .quick-shop-wrapper .quick-shop-close:before {
-        background-color: white; }
 
 .quick-shop-shown .woodmart-buttons,
 .loading-quick-shop .woodmart-buttons {
@@ -14695,7 +14691,7 @@ td.product-total .amount {
           border-width: 5px 0 5px 5px;
           border-color: transparent;
           border-left-color: #000; }
-      .woodmart-buttons > div a:focus, .woodmart-buttons > div a:hover {
+      .woodmart-buttons > div a:hover {
         text-decoration: none;
         outline: none;
         background-color: transparent;
@@ -14894,7 +14890,8 @@ td.product-total .amount {
       height: 30px;
       line-height: 30px;
       overflow: hidden; }
-  .woodmart-hover-alt .woodmart-product-countdown {
+  .woodmart-hover-alt .woodmart-product-countdown,
+  .woodmart-hover-alt .woodmart-stock-progress-bar {
     margin-top: 5px; }
   .woodmart-hover-alt .swatches-on-grid {
     margin-bottom: 0; }
@@ -15496,7 +15493,7 @@ td.product-total .amount {
         transition: opacity .2s ease; }
       .woodmart-hover-base .product-compare-button a .blockOverlay {
         display: none !important; }
-      .woodmart-hover-base .product-compare-button a:hover, .woodmart-hover-base .product-compare-button a:focus {
+      .woodmart-hover-base .product-compare-button a:hover {
         -webkit-box-shadow: none;
                 box-shadow: none; }
       .woodmart-hover-base .product-compare-button a.loading:not(.added):before {
@@ -15633,7 +15630,7 @@ td.product-total .amount {
     .color-scheme-light .woodmart-hover-base .product-compare-button a:after, .woodmart-dark .woodmart-hover-base .product-compare-button a:after {
       border-color: rgba(255, 255, 255, 0.15);
       border-left-color: white; }
-    .color-scheme-light .woodmart-hover-base .product-compare-button a:hover, .color-scheme-light .woodmart-hover-base .product-compare-button a:focus, .woodmart-dark .woodmart-hover-base .product-compare-button a:hover, .woodmart-dark .woodmart-hover-base .product-compare-button a:focus {
+    .color-scheme-light .woodmart-hover-base .product-compare-button a:hover, .woodmart-dark .woodmart-hover-base .product-compare-button a:hover {
       color: rgba(255, 255, 255, 0.8); }
   .color-scheme-light .woodmart-hover-base .woodmart-product-countdown, .woodmart-dark .woodmart-hover-base .woodmart-product-countdown {
     border-color: rgba(255, 255, 255, 0.15); }
@@ -15874,6 +15871,8 @@ td.product-total .amount {
     font-size: 20px; }
   .product-list-item .woodmart-product-countdown {
     margin-bottom: 15px; }
+  .product-list-item .woodmart-stock-progress-bar {
+    margin-bottom: 20px; }
   .product-list-item .woocommerce-review-link {
     display: none; }
   .product-list-item .woocommerce-product-details__short-description {
@@ -17132,7 +17131,7 @@ td.product-total .amount {
       width: 10px;
       height: 2px;
       display: inline-block;
-      background-color: #333333;
+      background-color: currentColor;
       -webkit-transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out,  width 0.2s ease-in-out;
       -webkit-transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
@@ -17140,8 +17139,6 @@ td.product-total .amount {
       transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out; }
 .color-scheme-light .widget_layered_nav_filters ul li a, .woodmart-dark .widget_layered_nav_filters ul li a {
   color: white; }
-  .color-scheme-light .widget_layered_nav_filters ul li a:after, .color-scheme-light .widget_layered_nav_filters ul li a:before, .woodmart-dark .widget_layered_nav_filters ul li a:after, .woodmart-dark .widget_layered_nav_filters ul li a:before {
-    background-color: white; }
 
 .woodmart-user-panel > .woodmart-user-panel {
   display: -webkit-box;
@@ -17880,6 +17877,38 @@ a.login-to-prices-msg {
   .woodmart-dark .quantity input[type="button"] {
     border-color: rgba(255, 255, 255, 0.15); }
 
+.woodmart-stock-progress-bar .stock-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5px;
+  color: #777777; }
+  .woodmart-stock-progress-bar .stock-info span {
+    font-weight: 600;
+    margin-left: 3px;
+    color: #333333; }
+.woodmart-stock-progress-bar .progress-area,
+.woodmart-stock-progress-bar .progress-bar {
+  height: 7px; }
+.woodmart-stock-progress-bar .progress-area {
+  width: 100%;
+  background-color: #f4f4f4; }
+.color-scheme-light .woodmart-stock-progress-bar .stock-info, .woodmart-dark .woodmart-stock-progress-bar .stock-info {
+  color: rgba(255, 255, 255, 0.8); }
+  .color-scheme-light .woodmart-stock-progress-bar .stock-info span, .woodmart-dark .woodmart-stock-progress-bar .stock-info span {
+    color: white; }
+.color-scheme-light .woodmart-stock-progress-bar .progress-area, .woodmart-dark .woodmart-stock-progress-bar .progress-area {
+  background-color: #101010; }
+
 ul.woocommerce-error, ul.woocommerce-message, ul.woocommerce-info {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -18302,6 +18331,95 @@ ul.woocommerce-error, ul.woocommerce-message, ul.woocommerce-info {
   .woodmart-dark .woodmart-highlighted-products:not(.with-title) .wrap-loading-arrow > div {
     background-color: #101010; }
 
+.products-bordered-grid {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+  .products-bordered-grid.elements-grid {
+    border-left-width: 1px;
+    border-style: solid;
+    -webkit-box-align: stretch !important;
+        -ms-flex-align: stretch !important;
+            align-items: stretch !important; }
+  .products-bordered-grid:not(.elements-list) .product {
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    margin-bottom: 0 !important;
+    border-color: inherit; }
+  .products-bordered-grid.woodmart-spacing-2 .product {
+    padding-top: 1px;
+    padding-bottom: 1px; }
+  .products-bordered-grid.woodmart-spacing-6 .product {
+    padding-top: 3px;
+    padding-bottom: 3px; }
+  .products-bordered-grid.woodmart-spacing-10 .product {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .products-bordered-grid.woodmart-spacing-20 .product {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .products-bordered-grid.woodmart-spacing-30 .product {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .products-bordered-grid + .products-footer {
+    margin-top: 25px; }
+  .products-bordered-grid.elements-list {
+    border-width: 1px;
+    padding-top: 30px; }
+  .products-bordered-grid div.owl-item {
+    padding-left: 0;
+    padding-right: 0; }
+  .products-bordered-grid .owl-item,
+  .products-bordered-grid .owl-stage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    border-color: inherit; }
+  .products-bordered-grid .owl-carousel-item {
+    width: 100%;
+    border-width: 1px;
+    border-right-style: solid;
+    border-color: inherit; }
+    .products-bordered-grid .owl-carousel-item .product-grid-item {
+      margin-bottom: 0;
+      border-style: none; }
+  .products-bordered-grid .owl-stage-outer,
+  .products-bordered-grid .owl-carousel:not(.owl-loaded) {
+    border-style: solid;
+    padding: 0 !important; }
+  .products-bordered-grid .owl-stage-outer {
+    margin-left: 1px;
+    margin-right: 1px;
+    border-width: 1px; }
+  .products-bordered-grid .owl-carousel:not(.owl-loaded) {
+    border-top-width: 1px;
+    border-bottom-width: 1px; }
+    .products-bordered-grid .owl-carousel:not(.owl-loaded) .owl-carousel-item:first-child {
+      border-left-style: solid; }
+  .products-bordered-grid .owl-item:last-child .owl-carousel-item {
+    border-right-style: none; }
+  .products-bordered-grid.woodmart-carousel-spacing-2 .owl-carousel-item {
+    padding: 1px; }
+  .products-bordered-grid.woodmart-carousel-spacing-6 .owl-carousel-item {
+    padding: 3px; }
+  .products-bordered-grid.woodmart-carousel-spacing-10 .owl-carousel-item {
+    padding: 5px; }
+  .products-bordered-grid.woodmart-carousel-spacing-20 .owl-carousel-item {
+    padding: 10px; }
+  .products-bordered-grid.woodmart-carousel-spacing-30 .owl-carousel-item {
+    padding: 15px; }
+  .products-bordered-grid .owl-nav > div[class*="prev"] {
+    left: -50px !important; }
+  .products-bordered-grid .owl-nav > div[class*="next"] {
+    right: -50px !important; }
+
 .products {
   -webkit-transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
   -webkit-transition: opacity 0.25s ease, visibility 0.25s ease, -webkit-transform 0.25s ease;
@@ -18422,7 +18540,7 @@ ul.woocommerce-error, ul.woocommerce-message, ul.woocommerce-info {
       width: 10px;
       height: 2px;
       display: inline-block;
-      background-color: #333333;
+      background-color: currentColor;
       -webkit-transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out,  width 0.2s ease-in-out;
       -webkit-transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
@@ -18442,8 +18560,6 @@ ul.woocommerce-error, ul.woocommerce-message, ul.woocommerce-info {
       -webkit-transform: rotate(0); }
   .woodmart-dark .woodmart-clear-filters-wrapp .woodmart-clear-filters {
     color: white; }
-    .woodmart-dark .woodmart-clear-filters-wrapp .woodmart-clear-filters:after, .woodmart-dark .woodmart-clear-filters-wrapp .woodmart-clear-filters:before {
-      background-color: white; }
 
 .shop-loop-head {
   display: -webkit-box;
@@ -19122,6 +19238,8 @@ del .amount {
     max-height: 70px; }
 .product-image-summary .woodmart-product-countdown {
   margin-bottom: 10px; }
+.product-image-summary .woodmart-stock-progress-bar {
+  margin-bottom: 20px; }
 .product-image-summary .quantity {
   margin-right: 10px;
   margin-bottom: 10px; }
@@ -21189,7 +21307,7 @@ div.create-account {
       color: #ffffff; }
   .woocommerce-MyAccount-content .woocommerce-Message {
     margin-bottom: 30px; }
-  .woodmart-dark .woocommerce-MyAccount-content > p:first-child strong {
+  .woodmart-dark .woocommerce-MyAccount-content > p:not(.woocommerce-Message):first-child strong {
     color: white; }
 
 .order-info mark {
@@ -22478,7 +22596,7 @@ table.compare-list tr.remove a {
     width: 15px;
     height: 2px;
     display: inline-block;
-    background-color: #2d2a2a;
+    background-color: currentColor;
     -webkit-transition: background-color 0.2s ease-in-out,  transform 0.2s ease-in-out,  width 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out,  width 0.2s ease-in-out,  -webkit-transform 0.2s ease-in-out;
@@ -22492,8 +22610,6 @@ table.compare-list tr.remove a {
   color: white; }
 .woodmart-dark table.compare-list tr.remove a {
   color: white; }
-  .woodmart-dark table.compare-list tr.remove a:after, .woodmart-dark table.compare-list tr.remove a:before {
-    background-color: white; }
 
 .yith-woocompare-premium > p {
   text-align: center; }
@@ -24516,30 +24632,30 @@ form.woocommerce-currency-switcher-form .dd-pointer-up.dd-pointer-down {
   margin-bottom: 0; }
 
 body .wp-playlist-item, .menu-item-register .login-title, .login-form-side .woocommerce-form-login, .login-form-side .create-account-question, .autocomplete-suggestion, .view-all-results, .woodmart-search-full-screen .searchform, .copyrights-wrapper, .mobile-nav .create-nav-msg, .comments-area .comment, .comments-area .children, .comments-area .logged-in-as > a:not(:last-child), .share-with-lines > span, .widget, .mobile-menu-widget, .widget-heading, .woodmart-recent-posts li, .widget_rss ul li, .widget_tag_cloud .tagcloud a,
-.widget_product_tag_cloud .tagcloud a, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .icl_post_in_other_langs,
-.wpml-ls-statics-post_translations, .woodmart-title-style-bordered .left-line,
-.woodmart-title-style-bordered .right-line, .woodmart-twitter-element .twitter-post, .woodmart-price-table .woodmart-plan-inner, .woodmart-price-table .woodmart-plan-features, .woodmart-price-table .woodmart-plan-feature, .woodmart-price-table.price-style-alt .woodmart-plan-price, .popup-quick-view .entry-summary .product_meta, .meta-location-add_to_cart .product_meta, .widget_product_categories .count, .woodmart-woocommerce-layered-nav .count, .product_list_widget > li, .widget_shopping_cart .total, .woodmart-clear-filters-wrapp, .filters-area, .single-product-sidebar.sidebar-right, .single-product-sidebar.sidebar-left, .product-tabs-wrapper, .tabs-location-standard.reviews-location-separate.tabs-type-tabs .woocommerce-tabs, .commentlist > li, .woodmart-product-instagram, .woocommerce-shipping-fields, .woocommerce-terms-and-conditions-wrapper, .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text, #customer_login > div:not(:first-child):last-child, .lost_reset_password .form-row-first, .social-login-title:after, .social-login-title:before,
+.widget_product_tag_cloud .tagcloud a, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .icl_post_in_other_langs, .wpml-ls-statics-post_translations, .woodmart-title-style-bordered .left-line,
+.woodmart-title-style-bordered .right-line, .woodmart-twitter-element .twitter-post, .woodmart-price-table .woodmart-plan-inner, .woodmart-price-table .woodmart-plan-features, .woodmart-price-table .woodmart-plan-feature, .woodmart-price-table.price-style-alt .woodmart-plan-price, .popup-quick-view .entry-summary .product_meta, .meta-location-add_to_cart .product_meta, .widget_product_categories .count, .woodmart-woocommerce-layered-nav .count, .product_list_widget > li, .widget_shopping_cart .total, .products-bordered-grid.elements-grid, .products-bordered-grid .owl-stage-outer,
+.products-bordered-grid .owl-carousel:not(.owl-loaded), .woodmart-clear-filters-wrapp, .filters-area, .single-product-sidebar.sidebar-right, .single-product-sidebar.sidebar-left, .product-tabs-wrapper, .tabs-location-standard.reviews-location-separate.tabs-type-tabs .woocommerce-tabs, .commentlist > li, .woodmart-product-instagram, .woocommerce-shipping-fields, .woocommerce-terms-and-conditions-wrapper, .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text, #customer_login > div:not(:first-child):last-child, .lost_reset_password .form-row-first, .social-login-title:after, .social-login-title:before,
 .register-or:after,
 .register-or:before, .woodmart-my-account-sidebar, .woodmart-my-account-sidebar .sidebar-container, .woocommerce-MyAccount-content > p:not(.woocommerce-Message):first-child, .woocommerce-MyAccount-title, .woocommerce-thankyou-order-details li,
 .wc-bacs-bank-details li, .woodmart-pf-price-range .filter_price_slider_amount, .brands-style-bordered .brand-item, .brands-style-bordered.brands-carousel .owl-stage-outer,
 .brands-style-bordered.brands-carousel .owl-carousel:not(.owl-loaded), .brands-style-bordered.brands-list .brand-item > a {
   border-color: rgba(129, 129, 129, 0.2); }
-  .woodmart-dark body .wp-playlist-item, body .woodmart-dark .wp-playlist-item, .woodmart-dark .menu-item-register .login-title, .menu-item-register .woodmart-dark .login-title, .woodmart-dark .login-form-side .woocommerce-form-login, .login-form-side .woodmart-dark .woocommerce-form-login, .woodmart-dark .login-form-side .create-account-question, .login-form-side .woodmart-dark .create-account-question, .woodmart-dark .autocomplete-suggestion, .woodmart-dark .view-all-results, .woodmart-dark .woodmart-search-full-screen .searchform, .woodmart-search-full-screen .woodmart-dark .searchform, .woodmart-dark .copyrights-wrapper, .woodmart-dark .mobile-nav .create-nav-msg, .mobile-nav .woodmart-dark .create-nav-msg, .woodmart-dark .comments-area .comment, .comments-area .woodmart-dark .comment, .woodmart-dark .comments-area .children, .comments-area .woodmart-dark .children, .woodmart-dark .comments-area .logged-in-as > a:not(:last-child), .comments-area .woodmart-dark .logged-in-as > a:not(:last-child), .woodmart-dark .share-with-lines > span, .woodmart-dark .widget, .woodmart-dark .mobile-menu-widget, .woodmart-dark .widget-heading, .woodmart-dark .woodmart-recent-posts li, .woodmart-recent-posts .woodmart-dark li, .woodmart-dark .widget_rss ul li, .widget_rss ul .woodmart-dark li, .woodmart-dark .widget_tag_cloud .tagcloud a, .widget_tag_cloud .tagcloud .woodmart-dark a,
-  .woodmart-dark .widget_product_tag_cloud .tagcloud a,
-  .widget_product_tag_cloud .tagcloud .woodmart-dark a, .woodmart-dark .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .woodmart-dark .vc_tta-panel, .woodmart-dark .icl_post_in_other_langs,
-  .woodmart-dark .wpml-ls-statics-post_translations, .woodmart-dark .woodmart-title-style-bordered .left-line, .woodmart-title-style-bordered .woodmart-dark .left-line,
-  .woodmart-dark .woodmart-title-style-bordered .right-line,
-  .woodmart-title-style-bordered .woodmart-dark .right-line, .woodmart-dark .woodmart-twitter-element .twitter-post, .woodmart-twitter-element .woodmart-dark .twitter-post, .woodmart-dark .woodmart-price-table .woodmart-plan-inner, .woodmart-price-table .woodmart-dark .woodmart-plan-inner, .woodmart-dark .woodmart-price-table .woodmart-plan-features, .woodmart-price-table .woodmart-dark .woodmart-plan-features, .woodmart-dark .woodmart-price-table .woodmart-plan-feature, .woodmart-price-table .woodmart-dark .woodmart-plan-feature, .woodmart-dark .woodmart-price-table.price-style-alt .woodmart-plan-price, .woodmart-price-table.price-style-alt .woodmart-dark .woodmart-plan-price, .woodmart-dark .popup-quick-view .entry-summary .product_meta, .popup-quick-view .entry-summary .woodmart-dark .product_meta, .woodmart-dark .meta-location-add_to_cart .product_meta, .meta-location-add_to_cart .woodmart-dark .product_meta, .woodmart-dark .widget_product_categories .count, .widget_product_categories .woodmart-dark .count, .woodmart-dark .woodmart-woocommerce-layered-nav .count, .woodmart-woocommerce-layered-nav .woodmart-dark .count, .woodmart-dark .product_list_widget > li, .woodmart-dark .widget_shopping_cart .total, .widget_shopping_cart .woodmart-dark .total, .woodmart-dark .woodmart-clear-filters-wrapp, .woodmart-dark .filters-area, .woodmart-dark .single-product-sidebar.sidebar-right, .woodmart-dark .single-product-sidebar.sidebar-left, .woodmart-dark .product-tabs-wrapper, .woodmart-dark .tabs-location-standard.reviews-location-separate.tabs-type-tabs .woocommerce-tabs, .tabs-location-standard.reviews-location-separate.tabs-type-tabs .woodmart-dark .woocommerce-tabs, .woodmart-dark .commentlist > li, .woodmart-dark .woodmart-product-instagram, .woodmart-dark .woocommerce-shipping-fields, .woodmart-dark .woocommerce-terms-and-conditions-wrapper, .woodmart-dark .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text, .woocommerce-terms-and-conditions-wrapper .woodmart-dark .woocommerce-privacy-policy-text, .woodmart-dark #customer_login > div:not(:first-child):last-child, .woodmart-dark .lost_reset_password .form-row-first, .lost_reset_password .woodmart-dark .form-row-first, .woodmart-dark .social-login-title:after, .woodmart-dark .social-login-title:before,
-  .woodmart-dark .register-or:after,
-  .woodmart-dark .register-or:before, .woodmart-dark .woodmart-my-account-sidebar, .woodmart-dark .woodmart-my-account-sidebar .sidebar-container, .woodmart-my-account-sidebar .woodmart-dark .sidebar-container, .woodmart-dark .woocommerce-MyAccount-content > p:not(.woocommerce-Message):first-child, .woodmart-dark .woocommerce-MyAccount-title, .woodmart-dark .woocommerce-thankyou-order-details li, .woocommerce-thankyou-order-details .woodmart-dark li,
-  .woodmart-dark .wc-bacs-bank-details li,
-  .wc-bacs-bank-details .woodmart-dark li, .woodmart-dark .woodmart-pf-price-range .filter_price_slider_amount, .woodmart-pf-price-range .woodmart-dark .filter_price_slider_amount, .woodmart-dark .brands-style-bordered .brand-item, .brands-style-bordered .woodmart-dark .brand-item, .woodmart-dark .brands-style-bordered.brands-carousel .owl-stage-outer, .brands-style-bordered.brands-carousel .woodmart-dark .owl-stage-outer,
-  .woodmart-dark .brands-style-bordered.brands-carousel .owl-carousel:not(.owl-loaded),
-  .brands-style-bordered.brands-carousel .woodmart-dark .owl-carousel:not(.owl-loaded), .woodmart-dark .brands-style-bordered.brands-list .brand-item > a, .brands-style-bordered.brands-list .woodmart-dark .brand-item > a {
-    border-color: rgba(255, 255, 255, 0.15); }
+
+body.woodmart-dark .wp-playlist-item, .color-scheme-light .autocomplete-suggestion, .woodmart-dark .autocomplete-suggestion, .woodmart-dark .view-all-results, .woodmart-dark .comments-area .comment,
+.woodmart-dark .comments-area .children, .woodmart-dark .comments-area .logged-in-as > a:not(:last-child), .color-scheme-light .share-with-lines > span, .woodmart-dark .share-with-lines > span, .woodmart-dark .mobile-menu-widget, .woodmart-dark .widget-heading, .wpb-js-composer.woodmart-dark .vc_tta.vc_general.vc_tta-style-classic.vc_tta-accordion.vc_tta-color-white .vc_tta-panel, .woodmart-dark .icl_post_in_other_langs,
+.woodmart-dark .wpml-ls-statics-post_translations, .woodmart-dark .woodmart-twitter-element .twitter-post, .color-scheme-light .woodmart-price-table .woodmart-plan-inner, .woodmart-dark .woodmart-price-table .woodmart-plan-inner, .color-scheme-light .woodmart-price-table .woodmart-plan-features, .woodmart-dark .woodmart-price-table .woodmart-plan-features, .color-scheme-light .woodmart-price-table .woodmart-plan-feature, .woodmart-dark .woodmart-price-table .woodmart-plan-feature, .woodmart-dark .woodmart-price-table.price-style-alt .woodmart-plan-price, .woodmart-dark .popup-quick-view .entry-summary .product_meta, .woodmart-dark .widget_shopping_cart .total, .color-scheme-light .products-bordered-grid.elements-grid,
+.color-scheme-light .products-bordered-grid .owl-stage-outer,
+.color-scheme-light .products-bordered-grid .owl-carousel:not(.owl-loaded), .woodmart-dark .products-bordered-grid.elements-grid,
+.woodmart-dark .products-bordered-grid .owl-stage-outer,
+.woodmart-dark .products-bordered-grid .owl-carousel:not(.owl-loaded), .woodmart-dark .woodmart-clear-filters-wrapp, .woodmart-dark .filters-area, .woodmart-dark .single-product-sidebar.sidebar-right, .woodmart-dark .single-product-sidebar.sidebar-left, .woodmart-dark .meta-location-add_to_cart .product_meta, .woodmart-dark .product-tabs-wrapper, .woodmart-dark .tabs-location-standard.reviews-location-separate.tabs-type-tabs .woocommerce-tabs, .woodmart-dark .commentlist > li, .woodmart-dark .woodmart-product-instagram, .woodmart-dark .woocommerce-shipping-fields, .woodmart-dark .woocommerce-terms-and-conditions-wrapper, .woodmart-dark .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text, .woodmart-dark #customer_login > div:not(:first-child):last-child, .woodmart-dark .lost_reset_password .form-row-first, .woodmart-dark .social-login-title:after, .woodmart-dark .social-login-title:before,
+.woodmart-dark .register-or:after,
+.woodmart-dark .register-or:before, .woodmart-dark .woodmart-my-account-sidebar, .woodmart-dark .woodmart-my-account-sidebar .sidebar-container, .woodmart-dark .woocommerce-MyAccount-content > p:not(.woocommerce-Message):first-child, .woodmart-dark .woocommerce-MyAccount-title, .woodmart-dark .woocommerce-thankyou-order-details li,
+.woodmart-dark .wc-bacs-bank-details li, .woodmart-dark .woodmart-pf-price-range .filter_price_slider_amount, .woodmart-dark .brands-style-bordered .brand-item, .woodmart-dark .brands-style-bordered.brands-carousel .owl-stage-outer,
+.woodmart-dark .brands-style-bordered.brands-carousel .owl-carousel:not(.owl-loaded), .woodmart-dark .brands-style-bordered.brands-list .brand-item > a {
+  border-color: rgba(255, 255, 255, 0.15); }
 
 a:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, blockquote footer:before, blockquote cite,
-blockquote cite a, .color-scheme-dark a:hover, .color-primary, .woodmart-dark .color-primary, .woodmart-cart-design-3 .woodmart-cart-subtotal .amount, .menu-item-register .create-account-link, .menu-item-register .create-account-link:hover, .btn-style-bordered.btn-color-primary, .mega-menu-list > li > a:hover, .mega-menu-list .sub-sub-menu li a:hover, .site-mobile-menu li.current-menu-item > a, .site-mobile-menu .sub-menu li.current-menu-item > a, .dropdowns-color-light .site-mobile-menu li.current-menu-item > a, .dropdowns-color-light .site-mobile-menu .sub-menu li.current-menu-item > a, .comments-area .reply a, .comments-area .reply a:hover, .comments-area .logged-in-as > a:hover, .blog-post-loop .entry-title a:hover, .read-more-section a, .read-more-section a:hover, .single-post-navigation .blog-posts-nav-btn a:hover, .error404 .page-title, .not-found .entry-header:before, .subtitle-color-primary.subtitle-style-default, .woodmart-title-color-primary .subtitle-style-default, .instagram-widget .clear a:hover, .box-icon-wrapper.box-with-text, .woodmart-price-table.price-style-alt .woodmart-price-currency, .woodmart-price-table.price-style-alt .woodmart-price-value, .woodmart-menu-price.cursor-pointer:hover .menu-price-title, .woodmart-menu-price.cursor-pointer:focus .menu-price-title, .hotspot-icon-alt .hotspot-btn:after, .woodmart-sticky-btn .in-stock:before, .product-image-summary .in-stock:before, .variations_form .in-stock:before, .wishlist_table tr td.product-stock-status span.wishlist-in-stock:before, td.woocommerce-orders-table__cell-order-number a:hover, .woocommerce-order-pay td.product-total .amount, .woodmart-buttons > div a:focus, .woodmart-buttons > div a:hover, .woodmart-buttons .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse a, .woodmart-hover-base .product-compare-button a:hover, .woodmart-hover-base .product-compare-button a:focus, .woodmart-sticky-btn .woodmart-sticky-btn-wishlist.exists, .woodmart-sticky-btn .woodmart-sticky-btn-wishlist:hover, .woocommerce-Address-title .edit:hover, a.login-to-prices-msg, a.login-to-prices-msg:hover, .amount, .price, .price ins, .compare-btn-wrapper a:hover,
+blockquote cite a, .color-scheme-dark a:hover, .color-primary, .woodmart-dark .color-primary, .woodmart-cart-design-3 .woodmart-cart-subtotal .amount, .menu-item-register .create-account-link, .menu-item-register .create-account-link:hover, .btn-style-bordered.btn-color-primary, .mega-menu-list > li > a:hover, .mega-menu-list .sub-sub-menu li a:hover, .site-mobile-menu li.current-menu-item > a, .site-mobile-menu .sub-menu li.current-menu-item > a, .dropdowns-color-light .site-mobile-menu li.current-menu-item > a, .dropdowns-color-light .site-mobile-menu .sub-menu li.current-menu-item > a, .comments-area .reply a, .comments-area .reply a:hover, .comments-area .logged-in-as > a:hover, .blog-post-loop .entry-title a:hover, .read-more-section a, .read-more-section a:hover, .single-post-navigation .blog-posts-nav-btn a:hover, .error404 .page-title, .not-found .entry-header:before, .subtitle-color-primary.subtitle-style-default, .woodmart-title-color-primary .subtitle-style-default, .instagram-widget .clear a:hover, .box-icon-wrapper.box-with-text, .woodmart-price-table.price-style-alt .woodmart-price-currency, .woodmart-price-table.price-style-alt .woodmart-price-value, .woodmart-menu-price.cursor-pointer:hover .menu-price-title, .woodmart-menu-price.cursor-pointer:focus .menu-price-title, .hotspot-icon-alt .hotspot-btn:after, .woodmart-sticky-btn .in-stock:before, .product-image-summary .in-stock:before, .variations_form .in-stock:before, .wishlist_table tr td.product-stock-status span.wishlist-in-stock:before, td.woocommerce-orders-table__cell-order-number a:hover, .woocommerce-order-pay td.product-total .amount, .woodmart-buttons > div a:hover, .woodmart-buttons .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse a, .woodmart-hover-base .product-compare-button a:hover, .woodmart-sticky-btn .woodmart-sticky-btn-wishlist.exists, .woodmart-sticky-btn .woodmart-sticky-btn-wishlist:hover, .woocommerce-Address-title .edit:hover, a.login-to-prices-msg, a.login-to-prices-msg:hover, .amount, .price, .price ins, .compare-btn-wrapper a:hover,
 .summary-inner > .yith-wcwl-add-to-wishlist a:hover,
 .sizeguide-btn-wrapp a:hover, .woodmart-dark .compare-btn-wrapper a:hover,
 .woodmart-dark .summary-inner > .yith-wcwl-add-to-wishlist a:hover,
@@ -24557,7 +24673,7 @@ blockquote cite a, .color-scheme-dark a:hover, .color-primary, .woodmart-dark .c
 .widget_product_tag_cloud .tagcloud a:focus, .widget_calendar #wp-calendar #today, .slider-title:before, div.open-table-widget .otw-button-wrap .otw-submit,
 div.open-table-widget .otw-button-wrap .otw-submit-btn, .mc4wp-form input[type="submit"], .subtitle-color-primary.subtitle-style-background, .woodmart-title-color-primary .subtitle-style-background, .woodmart-title-style-simple.woodmart-title-color-primary .liner-continer:after, .icons-design-simple .woodmart-social-icon:hover, .timer-style-active .woodmart-timer > span, .woodmart-price-table .woodmart-plan-footer > a, .woodmart-price-table.price-style-default .woodmart-plan-price, .hotspot-icon-default .hotspot-btn, .hotspot-icon-alt .woodmart-image-hotspot.hotspot-opened .hotspot-btn, .hotspot-icon-alt .woodmart-image-hotspot:hover .hotspot-btn, .hotspot-content .add_to_cart_button, .widget_product_categories .product-categories li a:hover + .count, .widget_product_categories .product-categories li a:focus + .count, .widget_product_categories .product-categories li.current-cat > .count, .woodmart-woocommerce-layered-nav .layered-nav-link:hover + .count, .woodmart-woocommerce-layered-nav .layered-nav-link:focus + .count, .woodmart-woocommerce-layered-nav .chosen .count, td.woocommerce-orders-table__cell-order-actions a, .account-payment-methods-table .button, .product-label.onsale, .woodmart-hover-alt .btn-add-swap > a span:not(.woodmart-tooltip-label):before, .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .woodmart-hover-quick .woodmart-add-btn > a, .product-list-item .woodmart-add-btn > a, .woodmart-hover-standard .btn-add > a, .cat-design-replace-title .category-title, .popup-quick-view .woodmart-scroll-content > a, .popup-quick-view .view-details-btn, .widget_shopping_cart .buttons .checkout, .widget_price_filter .ui-slider .ui-slider-range, .widget_price_filter .ui-slider .ui-slider-handle:after, .widget_layered_nav ul .chosen a:before, button[name="save_account_details"],
 button[name="save_address"],
-button[name="track"], .quantity input[type="button"]:hover, .woocommerce-pagination .page-numbers .current, .woocommerce-store-notice, .single_add_to_cart_button, .tabs-layout-tabs .tabs li a:after, .checkout_coupon .button, #place_order, .return-to-shop .button, .cart-totals-inner .checkout-button, .cart-actions .button[name="apply_coupon"], .register .button,
+button[name="track"], .quantity input[type="button"]:hover, .woodmart-stock-progress-bar .progress-bar, .woocommerce-pagination .page-numbers .current, .woocommerce-store-notice, .single_add_to_cart_button, .tabs-layout-tabs .tabs li a:after, .checkout_coupon .button, #place_order, .return-to-shop .button, .cart-totals-inner .checkout-button, .cart-actions .button[name="apply_coupon"], .register .button,
 .login .button,
 .lost_reset_password .button, .woocommerce-MyAccount-content > p:not(.woocommerce-Message):first-child mark, .woocommerce-MyAccount-content > .button, .order-info mark, .order-again .button, .woocommerce-Button--next,
 .woocommerce-Button--previous,
@@ -24638,10 +24754,10 @@ legend, .element-title, .comments-area .comments-title,
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease; }
 
-.autocomplete-suggestion .suggestion-title, .widget_recent_entries ul li a, .widget_recent_comments ul li > a, .woodmart-recent-posts .entry-title a, .woodmart-menu-price .menu-price-title, .group_table td.label a, .product-grid-item .product-title, .yith-woocompare-widget .products-list li a.title, .product-title, table.compare-list tr.title td, .widget_recent_reviews .product-title, td.product-name a, a.product-title {
+.color-scheme-dark .widget a.product-title, .color-scheme-dark .woodmart-widget a.product-title, .color-scheme-dark div[class^="vc_wp"] a.product-title, .autocomplete-suggestion .suggestion-title, .widget_recent_entries ul li a, .widget_recent_comments ul li > a, .woodmart-recent-posts .entry-title a, .woodmart-menu-price .menu-price-title, .group_table td.label a, .product-grid-item .product-title, .yith-woocompare-widget .products-list li a.title, .product-title, table.compare-list tr.title td, .widget_recent_reviews .product-title, td.product-name a, a.product-title {
   color: #333333; }
 
-.product-grid-item .product-title a:hover, .widget_shopping_cart .mini_cart_item:hover .product-title, .product-title a:hover, .widget_recent_entries ul li a:hover, .widget_recent_comments ul li > a:hover, .woodmart-recent-posts .entry-title a:hover, .widget_recent_reviews .product-title:hover, td.product-name a:hover, .group_table td.label a:hover, a.product-title:hover {
+.product-grid-item .product-title a:hover, .color-scheme-dark .widget a.product-title:hover, .color-scheme-dark .woodmart-widget a.product-title:hover, .color-scheme-dark div[class^="vc_wp"] a.product-title:hover, .widget_shopping_cart .mini_cart_item:hover .product-title, .product-title a:hover, .widget_recent_entries ul li a:hover, .widget_recent_comments ul li > a:hover, .woodmart-recent-posts .entry-title a:hover, .widget_recent_reviews .product-title:hover, td.product-name a:hover, .group_table td.label a:hover, a.product-title:hover {
   color: rgba(51, 51, 51, 0.7); }
 
 .color-scheme-light .autocomplete-suggestion .suggestion-title, .woodmart-dark .autocomplete-suggestion .suggestion-title, .color-scheme-light .woodmart-menu-price .menu-price-title, .woodmart-dark .woodmart-menu-price .menu-price-title, .color-scheme-light .product-grid-item .product-title, .woodmart-dark .product-grid-item .product-title, .woodmart-hover-info-alt h3.product-title, .color-scheme-light .yith-woocompare-widget .products-list li a.title, .woodmart-dark .yith-woocompare-widget .products-list li a.title, .color-scheme-light .product-title, .woodmart-dark .product-title, .woodmart-dark table.compare-list tr.title td, .color-scheme-light .widget_recent_entries ul li a, .woodmart-dark .widget_recent_entries ul li a, .color-scheme-light .widget_recent_comments ul li > a, .woodmart-dark .widget_recent_comments ul li > a, .color-scheme-light .woodmart-recent-posts .entry-title a, .woodmart-dark .woodmart-recent-posts .entry-title a, .color-scheme-light .widget_recent_reviews .product-title, .woodmart-dark .widget_recent_reviews .product-title, .color-scheme-light td.product-name a, .woodmart-dark td.product-name a, .woodmart-dark .group_table td.label a, .color-scheme-light .widget a.product-title, .woodmart-dark .widget a.product-title,
@@ -24661,8 +24777,6 @@ legend, .element-title, .comments-area .comments-title,
 
 .dropdowns-color-light .cart-widget-side .close-side-widget, .dropdowns-color-light .login-form-side .close-side-widget, .woodmart-dark .widget-heading .close-side-widget {
   color: white; }
-  .dropdowns-color-light .cart-widget-side .close-side-widget:after, .dropdowns-color-light .login-form-side .close-side-widget:after, .woodmart-dark .widget-heading .close-side-widget:after, .dropdowns-color-light .cart-widget-side .close-side-widget:before, .dropdowns-color-light .login-form-side .close-side-widget:before, .woodmart-dark .widget-heading .close-side-widget:before {
-    background-color: white; }
 
 .platform-Windows .woodmart-search-opened .header-banner, .platform-Windows .full-screen-menu-open .header-banner,
 .platform-Windows .woodmart-search-opened .whb-row,
@@ -25170,7 +25284,7 @@ td.product-remove a, .woocommerce-remove-coupon, .yith-woocompare-widget .produc
   td.product-remove a:after, .woocommerce-remove-coupon:after, .yith-woocompare-widget .products-list li a.remove:after, td.product-remove a:before, .woocommerce-remove-coupon:before, .yith-woocompare-widget .products-list li a.remove:before {
     right: 8px; }
 
-.woodmart-dark td.product-remove a:after, td.product-remove .woodmart-dark a:after, .woodmart-dark .woocommerce-remove-coupon:after, .woodmart-dark .yith-woocompare-widget .products-list li a.remove:after, .yith-woocompare-widget .products-list li .woodmart-dark a.remove:after, .woodmart-dark td.product-remove a:before, td.product-remove .woodmart-dark a:before, .woodmart-dark .woocommerce-remove-coupon:before, .woodmart-dark .yith-woocompare-widget .products-list li a.remove:before, .yith-woocompare-widget .products-list li .woodmart-dark a.remove:before {
+.woodmart-dark td.product-remove a:after, .woodmart-dark .woocommerce-remove-coupon:after, .woodmart-dark .yith-woocompare-widget .products-list li a.remove:after, .woodmart-dark td.product-remove a:before, .woodmart-dark .woocommerce-remove-coupon:before, .woodmart-dark .yith-woocompare-widget .products-list li a.remove:before {
   background-color: white; }
 
 .dropdown-cart, .woodmart-search-dropdown, .sub-menu-dropdown, .menu-simple-dropdown .sub-sub-menu, .vertical-navigation .sub-menu-dropdown, .whb-text-element .wcml-dropdown .wcml-cs-submenu,
@@ -25347,7 +25461,7 @@ aside.sidebar-container.show-hidden-sidebar, .cart-widget-side.woodmart-cart-ope
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white));
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
 
-.woodmart-dark .portfolio-filter:after, .woodmart-dark .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs .vc_tta-tabs-container:after, .wpb-js-composer .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs .woodmart-dark .vc_tta-tabs-container:after, .woodmart-dark .woodmart-products-tabs .tabs-navigation-wrapper:after, .woodmart-products-tabs .woodmart-dark .tabs-navigation-wrapper:after {
+.woodmart-dark .portfolio-filter:after, .woodmart-dark .woodmart-products-tabs .tabs-navigation-wrapper:after {
   background: -webkit-gradient(linear, left top, right top, from(rgba(26, 26, 26, 0)), to(#1a1a1a));
   background: linear-gradient(to right, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%); }
 
@@ -25929,7 +26043,7 @@ button[name="track"]:hover, .single_add_to_cart_button:hover, .checkout_coupon .
   -webkit-box-shadow: none;
           box-shadow: none; }
 
-.btns-shop-3d .hotspot-content .add_to_cart_button, .btns-shop-3d td.woocommerce-orders-table__cell-order-actions a, .btns-shop-3d .account-payment-methods-table .button, .btns-shop-3d .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-3d .product-list-item .woodmart-add-btn > a, .btns-shop-3d .woodmart-hover-standard .btn-add > a, .btns-shop-3d .popup-quick-view .woodmart-scroll-content > a, .btns-shop-3d .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-3d .popup-added_to_cart .view-cart, .btns-shop-3d .widget_shopping_cart .buttons .checkout, .btns-shop-3d button[name=save_account_details], .btns-shop-3d button[name=save_address], .btns-shop-3d button[name=track], .btns-shop-3d .single_add_to_cart_button, .btns-shop-3d .checkout_coupon .button, .btns-shop-3d #place_order, .btns-shop-3d .return-to-shop .button, .btns-shop-3d .cart-totals-inner .checkout-button, .btns-shop-3d .cart-actions .button[name=apply_coupon], .btns-shop-3d .register .button, .btns-shop-3d .login .button, .btns-shop-3d .lost_reset_password .button, .btns-shop-3d .social-login-btn > a, .btns-shop-3d .woocommerce-MyAccount-content > .button, .btns-shop-3d .order-again .button, .btns-shop-3d .woocommerce-Button--next, .btns-shop-3d .woocommerce-Button--previous, .btns-shop-3d .woocommerce-MyAccount-downloads-file, .btns-shop-3d .woodmart-pf-btn button, .btns-shop-3d .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-3d table.compare-list tr.add-to-cart td a, .btns-shop-3d .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-3d .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-3d .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-3d #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-3d #dokan-seller-listing-wrap .dokan-btn, .btns-shop-3d .woocommerce-MyAccount-content .dokan-btn, .btns-shop-3d .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
+.btns-shop-3d .hotspot-content .add_to_cart_button, .btns-shop-3d td.woocommerce-orders-table__cell-order-actions a, .btns-shop-3d .account-payment-methods-table .button, .btns-shop-3d .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-3d .product-list-item .woodmart-add-btn > a, .btns-shop-3d .woodmart-hover-standard .btn-add > a, .btns-shop-3d .popup-quick-view .woodmart-scroll-content > a, .btns-shop-3d .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-3d .popup-added_to_cart .view-cart, .btns-shop-3d .widget_shopping_cart .buttons .checkout, .btns-shop-3d utton[name=save_account_details], .btns-shop-3d utton[name=save_address], .btns-shop-3d utton[name=track], .btns-shop-3d .single_add_to_cart_button, .btns-shop-3d .checkout_coupon .button, .btns-shop-3d #place_order, .btns-shop-3d .return-to-shop .button, .btns-shop-3d .cart-totals-inner .checkout-button, .btns-shop-3d .cart-actions .button[name=apply_coupon], .btns-shop-3d .register .button, .btns-shop-3d .login .button, .btns-shop-3d .lost_reset_password .button, .btns-shop-3d .social-login-btn > a, .btns-shop-3d .woocommerce-MyAccount-content > .button, .btns-shop-3d .order-again .button, .btns-shop-3d .woocommerce-Button--next, .btns-shop-3d .woocommerce-Button--previous, .btns-shop-3d .woocommerce-MyAccount-downloads-file, .btns-shop-3d .woodmart-pf-btn button, .btns-shop-3d .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-3d table.compare-list tr.add-to-cart td a, .btns-shop-3d .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-3d .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-3d .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-3d #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-3d #dokan-seller-listing-wrap .dokan-btn, .btns-shop-3d .woocommerce-MyAccount-content .dokan-btn, .btns-shop-3d .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
   border: none;
   -webkit-box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
           box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
@@ -25938,30 +26052,30 @@ button[name="track"]:hover, .single_add_to_cart_button:hover, .checkout_coupon .
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease,  -webkit-box-shadow 0s ease;
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, box-shadow 0s ease,  opacity 0.25s ease;
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, box-shadow 0s ease,  opacity 0.25s ease,  -webkit-box-shadow 0s ease; }
-  .btns-shop-3d .hotspot-content .add_to_cart_button:hover, .btns-shop-3d td.woocommerce-orders-table__cell-order-actions a:hover, .btns-shop-3d .account-payment-methods-table .button:hover, .btns-shop-3d .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:hover, .btns-shop-3d .product-list-item .woodmart-add-btn > a:hover, .btns-shop-3d .woodmart-hover-standard .btn-add > a:hover, .btns-shop-3d .popup-quick-view .woodmart-scroll-content > a:hover, .btns-shop-3d .woodmart-sticky-btn .woodmart-sticky-add-to-cart:hover, .btns-shop-3d .popup-added_to_cart .view-cart:hover, .btns-shop-3d .widget_shopping_cart .buttons .checkout:hover, .btns-shop-3d button[name=save_account_details]:hover, .btns-shop-3d button[name=save_address]:hover, .btns-shop-3d button[name=track]:hover, .btns-shop-3d .single_add_to_cart_button:hover, .btns-shop-3d .checkout_coupon .button:hover, .btns-shop-3d #place_order:hover, .btns-shop-3d .return-to-shop .button:hover, .btns-shop-3d .cart-totals-inner .checkout-button:hover, .btns-shop-3d .cart-actions .button[name=apply_coupon]:hover, .btns-shop-3d .register .button:hover, .btns-shop-3d .login .button:hover, .btns-shop-3d .lost_reset_password .button:hover, .btns-shop-3d .social-login-btn > a:hover, .btns-shop-3d .woocommerce-MyAccount-content > .button:hover, .btns-shop-3d .order-again .button:hover, .btns-shop-3d .woocommerce-Button--next:hover, .btns-shop-3d .woocommerce-Button--previous:hover, .btns-shop-3d .woocommerce-MyAccount-downloads-file:hover, .btns-shop-3d .woodmart-pf-btn button:hover, .btns-shop-3d .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:hover, .btns-shop-3d table.compare-list tr.add-to-cart td a:hover, .btns-shop-3d .yith-woocompare-premium .compare-list .product_info .button:hover, .btns-shop-3d .yith-woocompare-premium .compare-list .add-to-cart .button:hover, .btns-shop-3d .yith-woocompare-premium .compare-list .added_to_cart:hover, .btns-shop-3d #yith-woocompare-related .related-products .woocommerce > a:hover, .btns-shop-3d #dokan-seller-listing-wrap .dokan-btn:hover, .btns-shop-3d .woocommerce-MyAccount-content .dokan-btn:hover, .btns-shop-3d .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:hover {
+  .btns-shop-3d .hotspot-content .add_to_cart_button:hover, .btns-shop-3d td.woocommerce-orders-table__cell-order-actions a:hover, .btns-shop-3d .account-payment-methods-table .button:hover, .btns-shop-3d .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:hover, .btns-shop-3d .product-list-item .woodmart-add-btn > a:hover, .btns-shop-3d .woodmart-hover-standard .btn-add > a:hover, .btns-shop-3d .popup-quick-view .woodmart-scroll-content > a:hover, .btns-shop-3d .woodmart-sticky-btn .woodmart-sticky-add-to-cart:hover, .btns-shop-3d .popup-added_to_cart .view-cart:hover, .btns-shop-3d .widget_shopping_cart .buttons .checkout:hover, .btns-shop-3d utton[name=save_account_details]:hover, .btns-shop-3d utton[name=save_address]:hover, .btns-shop-3d utton[name=track]:hover, .btns-shop-3d .single_add_to_cart_button:hover, .btns-shop-3d .checkout_coupon .button:hover, .btns-shop-3d #place_order:hover, .btns-shop-3d .return-to-shop .button:hover, .btns-shop-3d .cart-totals-inner .checkout-button:hover, .btns-shop-3d .cart-actions .button[name=apply_coupon]:hover, .btns-shop-3d .register .button:hover, .btns-shop-3d .login .button:hover, .btns-shop-3d .lost_reset_password .button:hover, .btns-shop-3d .social-login-btn > a:hover, .btns-shop-3d .woocommerce-MyAccount-content > .button:hover, .btns-shop-3d .order-again .button:hover, .btns-shop-3d .woocommerce-Button--next:hover, .btns-shop-3d .woocommerce-Button--previous:hover, .btns-shop-3d .woocommerce-MyAccount-downloads-file:hover, .btns-shop-3d .woodmart-pf-btn button:hover, .btns-shop-3d .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:hover, .btns-shop-3d table.compare-list tr.add-to-cart td a:hover, .btns-shop-3d .yith-woocompare-premium .compare-list .product_info .button:hover, .btns-shop-3d .yith-woocompare-premium .compare-list .add-to-cart .button:hover, .btns-shop-3d .yith-woocompare-premium .compare-list .added_to_cart:hover, .btns-shop-3d #yith-woocompare-related .related-products .woocommerce > a:hover, .btns-shop-3d #dokan-seller-listing-wrap .dokan-btn:hover, .btns-shop-3d .woocommerce-MyAccount-content .dokan-btn:hover, .btns-shop-3d .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:hover {
     -webkit-box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
             box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15); }
-  .btns-shop-3d .hotspot-content .add_to_cart_button:active, .btns-shop-3d td.woocommerce-orders-table__cell-order-actions a:active, .btns-shop-3d .account-payment-methods-table .button:active, .btns-shop-3d .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:active, .btns-shop-3d .product-list-item .woodmart-add-btn > a:active, .btns-shop-3d .woodmart-hover-standard .btn-add > a:active, .btns-shop-3d .popup-quick-view .woodmart-scroll-content > a:active, .btns-shop-3d .woodmart-sticky-btn .woodmart-sticky-add-to-cart:active, .btns-shop-3d .popup-added_to_cart .view-cart:active, .btns-shop-3d .widget_shopping_cart .buttons .checkout:active, .btns-shop-3d button[name=save_account_details]:active, .btns-shop-3d button[name=save_address]:active, .btns-shop-3d button[name=track]:active, .btns-shop-3d .single_add_to_cart_button:active, .btns-shop-3d .checkout_coupon .button:active, .btns-shop-3d #place_order:active, .btns-shop-3d .return-to-shop .button:active, .btns-shop-3d .cart-totals-inner .checkout-button:active, .btns-shop-3d .cart-actions .button[name=apply_coupon]:active, .btns-shop-3d .register .button:active, .btns-shop-3d .login .button:active, .btns-shop-3d .lost_reset_password .button:active, .btns-shop-3d .social-login-btn > a:active, .btns-shop-3d .woocommerce-MyAccount-content > .button:active, .btns-shop-3d .order-again .button:active, .btns-shop-3d .woocommerce-Button--next:active, .btns-shop-3d .woocommerce-Button--previous:active, .btns-shop-3d .woocommerce-MyAccount-downloads-file:active, .btns-shop-3d .woodmart-pf-btn button:active, .btns-shop-3d .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:active, .btns-shop-3d table.compare-list tr.add-to-cart td a:active, .btns-shop-3d .yith-woocompare-premium .compare-list .product_info .button:active, .btns-shop-3d .yith-woocompare-premium .compare-list .add-to-cart .button:active, .btns-shop-3d .yith-woocompare-premium .compare-list .added_to_cart:active, .btns-shop-3d #yith-woocompare-related .related-products .woocommerce > a:active, .btns-shop-3d #dokan-seller-listing-wrap .dokan-btn:active, .btns-shop-3d .woocommerce-MyAccount-content .dokan-btn:active, .btns-shop-3d .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:active {
+  .btns-shop-3d .hotspot-content .add_to_cart_button:active, .btns-shop-3d td.woocommerce-orders-table__cell-order-actions a:active, .btns-shop-3d .account-payment-methods-table .button:active, .btns-shop-3d .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:active, .btns-shop-3d .product-list-item .woodmart-add-btn > a:active, .btns-shop-3d .woodmart-hover-standard .btn-add > a:active, .btns-shop-3d .popup-quick-view .woodmart-scroll-content > a:active, .btns-shop-3d .woodmart-sticky-btn .woodmart-sticky-add-to-cart:active, .btns-shop-3d .popup-added_to_cart .view-cart:active, .btns-shop-3d .widget_shopping_cart .buttons .checkout:active, .btns-shop-3d utton[name=save_account_details]:active, .btns-shop-3d utton[name=save_address]:active, .btns-shop-3d utton[name=track]:active, .btns-shop-3d .single_add_to_cart_button:active, .btns-shop-3d .checkout_coupon .button:active, .btns-shop-3d #place_order:active, .btns-shop-3d .return-to-shop .button:active, .btns-shop-3d .cart-totals-inner .checkout-button:active, .btns-shop-3d .cart-actions .button[name=apply_coupon]:active, .btns-shop-3d .register .button:active, .btns-shop-3d .login .button:active, .btns-shop-3d .lost_reset_password .button:active, .btns-shop-3d .social-login-btn > a:active, .btns-shop-3d .woocommerce-MyAccount-content > .button:active, .btns-shop-3d .order-again .button:active, .btns-shop-3d .woocommerce-Button--next:active, .btns-shop-3d .woocommerce-Button--previous:active, .btns-shop-3d .woocommerce-MyAccount-downloads-file:active, .btns-shop-3d .woodmart-pf-btn button:active, .btns-shop-3d .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:active, .btns-shop-3d table.compare-list tr.add-to-cart td a:active, .btns-shop-3d .yith-woocompare-premium .compare-list .product_info .button:active, .btns-shop-3d .yith-woocompare-premium .compare-list .add-to-cart .button:active, .btns-shop-3d .yith-woocompare-premium .compare-list .added_to_cart:active, .btns-shop-3d #yith-woocompare-related .related-products .woocommerce > a:active, .btns-shop-3d #dokan-seller-listing-wrap .dokan-btn:active, .btns-shop-3d .woocommerce-MyAccount-content .dokan-btn:active, .btns-shop-3d .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:active {
     -webkit-box-shadow: none;
             box-shadow: none;
     top: 1px; }
 
-.btns-shop-rounded .hotspot-content .add_to_cart_button, .btns-shop-rounded td.woocommerce-orders-table__cell-order-actions a, .btns-shop-rounded .account-payment-methods-table .button, .btns-shop-rounded .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-rounded .product-list-item .woodmart-add-btn > a, .btns-shop-rounded .woodmart-hover-standard .btn-add > a, .btns-shop-rounded .popup-quick-view .woodmart-scroll-content > a, .btns-shop-rounded .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-rounded .popup-added_to_cart .view-cart, .btns-shop-rounded .widget_shopping_cart .buttons .checkout, .btns-shop-rounded button[name=save_account_details], .btns-shop-rounded button[name=save_address], .btns-shop-rounded button[name=track], .btns-shop-rounded .single_add_to_cart_button, .btns-shop-rounded .checkout_coupon .button, .btns-shop-rounded #place_order, .btns-shop-rounded .return-to-shop .button, .btns-shop-rounded .cart-totals-inner .checkout-button, .btns-shop-rounded .cart-actions .button[name=apply_coupon], .btns-shop-rounded .register .button, .btns-shop-rounded .login .button, .btns-shop-rounded .lost_reset_password .button, .btns-shop-rounded .social-login-btn > a, .btns-shop-rounded .woocommerce-MyAccount-content > .button, .btns-shop-rounded .order-again .button, .btns-shop-rounded .woocommerce-Button--next, .btns-shop-rounded .woocommerce-Button--previous, .btns-shop-rounded .woocommerce-MyAccount-downloads-file, .btns-shop-rounded .woodmart-pf-btn button, .btns-shop-rounded .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-rounded table.compare-list tr.add-to-cart td a, .btns-shop-rounded .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-rounded .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-rounded .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-rounded #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-rounded #dokan-seller-listing-wrap .dokan-btn, .btns-shop-rounded .woocommerce-MyAccount-content .dokan-btn, .btns-shop-rounded .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
+.btns-shop-rounded .hotspot-content .add_to_cart_button, .btns-shop-rounded td.woocommerce-orders-table__cell-order-actions a, .btns-shop-rounded .account-payment-methods-table .button, .btns-shop-rounded .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-rounded .product-list-item .woodmart-add-btn > a, .btns-shop-rounded .woodmart-hover-standard .btn-add > a, .btns-shop-rounded .popup-quick-view .woodmart-scroll-content > a, .btns-shop-rounded .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-rounded .popup-added_to_cart .view-cart, .btns-shop-rounded .widget_shopping_cart .buttons .checkout, .btns-shop-rounded utton[name=save_account_details], .btns-shop-rounded utton[name=save_address], .btns-shop-rounded utton[name=track], .btns-shop-rounded .single_add_to_cart_button, .btns-shop-rounded .checkout_coupon .button, .btns-shop-rounded #place_order, .btns-shop-rounded .return-to-shop .button, .btns-shop-rounded .cart-totals-inner .checkout-button, .btns-shop-rounded .cart-actions .button[name=apply_coupon], .btns-shop-rounded .register .button, .btns-shop-rounded .login .button, .btns-shop-rounded .lost_reset_password .button, .btns-shop-rounded .social-login-btn > a, .btns-shop-rounded .woocommerce-MyAccount-content > .button, .btns-shop-rounded .order-again .button, .btns-shop-rounded .woocommerce-Button--next, .btns-shop-rounded .woocommerce-Button--previous, .btns-shop-rounded .woocommerce-MyAccount-downloads-file, .btns-shop-rounded .woodmart-pf-btn button, .btns-shop-rounded .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-rounded table.compare-list tr.add-to-cart td a, .btns-shop-rounded .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-rounded .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-rounded .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-rounded #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-rounded #dokan-seller-listing-wrap .dokan-btn, .btns-shop-rounded .woocommerce-MyAccount-content .dokan-btn, .btns-shop-rounded .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
   border-radius: 35px; }
 
-.btns-shop-semi-rounded .hotspot-content .add_to_cart_button, .btns-shop-semi-rounded td.woocommerce-orders-table__cell-order-actions a, .btns-shop-semi-rounded .account-payment-methods-table .button, .btns-shop-semi-rounded .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-semi-rounded .product-list-item .woodmart-add-btn > a, .btns-shop-semi-rounded .woodmart-hover-standard .btn-add > a, .btns-shop-semi-rounded .popup-quick-view .woodmart-scroll-content > a, .btns-shop-semi-rounded .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-semi-rounded .popup-added_to_cart .view-cart, .btns-shop-semi-rounded .widget_shopping_cart .buttons .checkout, .btns-shop-semi-rounded button[name=save_account_details], .btns-shop-semi-rounded button[name=save_address], .btns-shop-semi-rounded button[name=track], .btns-shop-semi-rounded .single_add_to_cart_button, .btns-shop-semi-rounded .checkout_coupon .button, .btns-shop-semi-rounded #place_order, .btns-shop-semi-rounded .return-to-shop .button, .btns-shop-semi-rounded .cart-totals-inner .checkout-button, .btns-shop-semi-rounded .cart-actions .button[name=apply_coupon], .btns-shop-semi-rounded .register .button, .btns-shop-semi-rounded .login .button, .btns-shop-semi-rounded .lost_reset_password .button, .btns-shop-semi-rounded .social-login-btn > a, .btns-shop-semi-rounded .woocommerce-MyAccount-content > .button, .btns-shop-semi-rounded .order-again .button, .btns-shop-semi-rounded .woocommerce-Button--next, .btns-shop-semi-rounded .woocommerce-Button--previous, .btns-shop-semi-rounded .woocommerce-MyAccount-downloads-file, .btns-shop-semi-rounded .woodmart-pf-btn button, .btns-shop-semi-rounded .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-semi-rounded table.compare-list tr.add-to-cart td a, .btns-shop-semi-rounded .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-semi-rounded .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-semi-rounded .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-semi-rounded #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-semi-rounded #dokan-seller-listing-wrap .dokan-btn, .btns-shop-semi-rounded .woocommerce-MyAccount-content .dokan-btn, .btns-shop-semi-rounded .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
+.btns-shop-semi-rounded .hotspot-content .add_to_cart_button, .btns-shop-semi-rounded td.woocommerce-orders-table__cell-order-actions a, .btns-shop-semi-rounded .account-payment-methods-table .button, .btns-shop-semi-rounded .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-semi-rounded .product-list-item .woodmart-add-btn > a, .btns-shop-semi-rounded .woodmart-hover-standard .btn-add > a, .btns-shop-semi-rounded .popup-quick-view .woodmart-scroll-content > a, .btns-shop-semi-rounded .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-semi-rounded .popup-added_to_cart .view-cart, .btns-shop-semi-rounded .widget_shopping_cart .buttons .checkout, .btns-shop-semi-rounded utton[name=save_account_details], .btns-shop-semi-rounded utton[name=save_address], .btns-shop-semi-rounded utton[name=track], .btns-shop-semi-rounded .single_add_to_cart_button, .btns-shop-semi-rounded .checkout_coupon .button, .btns-shop-semi-rounded #place_order, .btns-shop-semi-rounded .return-to-shop .button, .btns-shop-semi-rounded .cart-totals-inner .checkout-button, .btns-shop-semi-rounded .cart-actions .button[name=apply_coupon], .btns-shop-semi-rounded .register .button, .btns-shop-semi-rounded .login .button, .btns-shop-semi-rounded .lost_reset_password .button, .btns-shop-semi-rounded .social-login-btn > a, .btns-shop-semi-rounded .woocommerce-MyAccount-content > .button, .btns-shop-semi-rounded .order-again .button, .btns-shop-semi-rounded .woocommerce-Button--next, .btns-shop-semi-rounded .woocommerce-Button--previous, .btns-shop-semi-rounded .woocommerce-MyAccount-downloads-file, .btns-shop-semi-rounded .woodmart-pf-btn button, .btns-shop-semi-rounded .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-semi-rounded table.compare-list tr.add-to-cart td a, .btns-shop-semi-rounded .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-semi-rounded .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-semi-rounded .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-semi-rounded #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-semi-rounded #dokan-seller-listing-wrap .dokan-btn, .btns-shop-semi-rounded .woocommerce-MyAccount-content .dokan-btn, .btns-shop-semi-rounded .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
   border-radius: 5px; }
 
-.btns-shop-light .hotspot-content .add_to_cart_button, .btns-shop-light td.woocommerce-orders-table__cell-order-actions a, .btns-shop-light .account-payment-methods-table .button, .btns-shop-light .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-light .product-list-item .woodmart-add-btn > a, .btns-shop-light .woodmart-hover-standard .btn-add > a, .btns-shop-light .popup-quick-view .woodmart-scroll-content > a, .btns-shop-light .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-light .popup-added_to_cart .view-cart, .btns-shop-light .widget_shopping_cart .buttons .checkout, .btns-shop-light button[name=save_account_details], .btns-shop-light button[name=save_address], .btns-shop-light button[name=track], .btns-shop-light .single_add_to_cart_button, .btns-shop-light .checkout_coupon .button, .btns-shop-light #place_order, .btns-shop-light .return-to-shop .button, .btns-shop-light .cart-totals-inner .checkout-button, .btns-shop-light .cart-actions .button[name=apply_coupon], .btns-shop-light .register .button, .btns-shop-light .login .button, .btns-shop-light .lost_reset_password .button, .btns-shop-light .social-login-btn > a, .btns-shop-light .woocommerce-MyAccount-content > .button, .btns-shop-light .order-again .button, .btns-shop-light .woocommerce-Button--next, .btns-shop-light .woocommerce-Button--previous, .btns-shop-light .woocommerce-MyAccount-downloads-file, .btns-shop-light .woodmart-pf-btn button, .btns-shop-light .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-light table.compare-list tr.add-to-cart td a, .btns-shop-light .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-light .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-light .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-light #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-light #dokan-seller-listing-wrap .dokan-btn, .btns-shop-light .woocommerce-MyAccount-content .dokan-btn, .btns-shop-light .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
+.btns-shop-light .hotspot-content .add_to_cart_button, .btns-shop-light td.woocommerce-orders-table__cell-order-actions a, .btns-shop-light .account-payment-methods-table .button, .btns-shop-light .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-light .product-list-item .woodmart-add-btn > a, .btns-shop-light .woodmart-hover-standard .btn-add > a, .btns-shop-light .popup-quick-view .woodmart-scroll-content > a, .btns-shop-light .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-light .popup-added_to_cart .view-cart, .btns-shop-light .widget_shopping_cart .buttons .checkout, .btns-shop-light utton[name=save_account_details], .btns-shop-light utton[name=save_address], .btns-shop-light utton[name=track], .btns-shop-light .single_add_to_cart_button, .btns-shop-light .checkout_coupon .button, .btns-shop-light #place_order, .btns-shop-light .return-to-shop .button, .btns-shop-light .cart-totals-inner .checkout-button, .btns-shop-light .cart-actions .button[name=apply_coupon], .btns-shop-light .register .button, .btns-shop-light .login .button, .btns-shop-light .lost_reset_password .button, .btns-shop-light .social-login-btn > a, .btns-shop-light .woocommerce-MyAccount-content > .button, .btns-shop-light .order-again .button, .btns-shop-light .woocommerce-Button--next, .btns-shop-light .woocommerce-Button--previous, .btns-shop-light .woocommerce-MyAccount-downloads-file, .btns-shop-light .woodmart-pf-btn button, .btns-shop-light .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-light table.compare-list tr.add-to-cart td a, .btns-shop-light .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-light .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-light .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-light #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-light #dokan-seller-listing-wrap .dokan-btn, .btns-shop-light .woocommerce-MyAccount-content .dokan-btn, .btns-shop-light .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
   color: white; }
 
-.btns-shop-hover-light .hotspot-content .add_to_cart_button:hover, .btns-shop-hover-light td.woocommerce-orders-table__cell-order-actions a:hover, .btns-shop-hover-light .account-payment-methods-table .button:hover, .btns-shop-hover-light .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:hover, .btns-shop-hover-light .product-list-item .woodmart-add-btn > a:hover, .btns-shop-hover-light .woodmart-hover-standard .btn-add > a:hover, .btns-shop-hover-light .popup-quick-view .woodmart-scroll-content > a:hover, .btns-shop-hover-light .woodmart-sticky-btn .woodmart-sticky-add-to-cart:hover, .btns-shop-hover-light .popup-added_to_cart .view-cart:hover, .btns-shop-hover-light .widget_shopping_cart .buttons .checkout:hover, .btns-shop-hover-light button[name=save_account_details]:hover, .btns-shop-hover-light button[name=save_address]:hover, .btns-shop-hover-light button[name=track]:hover, .btns-shop-hover-light .single_add_to_cart_button:hover, .btns-shop-hover-light .checkout_coupon .button:hover, .btns-shop-hover-light #place_order:hover, .btns-shop-hover-light .return-to-shop .button:hover, .btns-shop-hover-light .cart-totals-inner .checkout-button:hover, .btns-shop-hover-light .cart-actions .button[name=apply_coupon]:hover, .btns-shop-hover-light .register .button:hover, .btns-shop-hover-light .login .button:hover, .btns-shop-hover-light .lost_reset_password .button:hover, .btns-shop-hover-light .social-login-btn > a:hover, .btns-shop-hover-light .woocommerce-MyAccount-content > .button:hover, .btns-shop-hover-light .order-again .button:hover, .btns-shop-hover-light .woocommerce-Button--next:hover, .btns-shop-hover-light .woocommerce-Button--previous:hover, .btns-shop-hover-light .woocommerce-MyAccount-downloads-file:hover, .btns-shop-hover-light .woodmart-pf-btn button:hover, .btns-shop-hover-light .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:hover, .btns-shop-hover-light table.compare-list tr.add-to-cart td a:hover, .btns-shop-hover-light .yith-woocompare-premium .compare-list .product_info .button:hover, .btns-shop-hover-light .yith-woocompare-premium .compare-list .add-to-cart .button:hover, .btns-shop-hover-light .yith-woocompare-premium .compare-list .added_to_cart:hover, .btns-shop-hover-light #yith-woocompare-related .related-products .woocommerce > a:hover, .btns-shop-hover-light #dokan-seller-listing-wrap .dokan-btn:hover, .btns-shop-hover-light .woocommerce-MyAccount-content .dokan-btn:hover, .btns-shop-hover-light .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:hover {
+.btns-shop-hover-light .hotspot-content .add_to_cart_button:hover, .btns-shop-hover-light td.woocommerce-orders-table__cell-order-actions a:hover, .btns-shop-hover-light .account-payment-methods-table .button:hover, .btns-shop-hover-light .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:hover, .btns-shop-hover-light .product-list-item .woodmart-add-btn > a:hover, .btns-shop-hover-light .woodmart-hover-standard .btn-add > a:hover, .btns-shop-hover-light .popup-quick-view .woodmart-scroll-content > a:hover, .btns-shop-hover-light .woodmart-sticky-btn .woodmart-sticky-add-to-cart:hover, .btns-shop-hover-light .popup-added_to_cart .view-cart:hover, .btns-shop-hover-light .widget_shopping_cart .buttons .checkout:hover, .btns-shop-hover-light utton[name=save_account_details]:hover, .btns-shop-hover-light utton[name=save_address]:hover, .btns-shop-hover-light utton[name=track]:hover, .btns-shop-hover-light .single_add_to_cart_button:hover, .btns-shop-hover-light .checkout_coupon .button:hover, .btns-shop-hover-light #place_order:hover, .btns-shop-hover-light .return-to-shop .button:hover, .btns-shop-hover-light .cart-totals-inner .checkout-button:hover, .btns-shop-hover-light .cart-actions .button[name=apply_coupon]:hover, .btns-shop-hover-light .register .button:hover, .btns-shop-hover-light .login .button:hover, .btns-shop-hover-light .lost_reset_password .button:hover, .btns-shop-hover-light .social-login-btn > a:hover, .btns-shop-hover-light .woocommerce-MyAccount-content > .button:hover, .btns-shop-hover-light .order-again .button:hover, .btns-shop-hover-light .woocommerce-Button--next:hover, .btns-shop-hover-light .woocommerce-Button--previous:hover, .btns-shop-hover-light .woocommerce-MyAccount-downloads-file:hover, .btns-shop-hover-light .woodmart-pf-btn button:hover, .btns-shop-hover-light .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:hover, .btns-shop-hover-light table.compare-list tr.add-to-cart td a:hover, .btns-shop-hover-light .yith-woocompare-premium .compare-list .product_info .button:hover, .btns-shop-hover-light .yith-woocompare-premium .compare-list .add-to-cart .button:hover, .btns-shop-hover-light .yith-woocompare-premium .compare-list .added_to_cart:hover, .btns-shop-hover-light #yith-woocompare-related .related-products .woocommerce > a:hover, .btns-shop-hover-light #dokan-seller-listing-wrap .dokan-btn:hover, .btns-shop-hover-light .woocommerce-MyAccount-content .dokan-btn:hover, .btns-shop-hover-light .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:hover {
   color: white; }
 
-.btns-shop-dark .hotspot-content .add_to_cart_button, .btns-shop-dark td.woocommerce-orders-table__cell-order-actions a, .btns-shop-dark .account-payment-methods-table .button, .btns-shop-dark .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-dark .product-list-item .woodmart-add-btn > a, .btns-shop-dark .woodmart-hover-standard .btn-add > a, .btns-shop-dark .popup-quick-view .woodmart-scroll-content > a, .btns-shop-dark .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-dark .popup-added_to_cart .view-cart, .btns-shop-dark .widget_shopping_cart .buttons .checkout, .btns-shop-dark button[name=save_account_details], .btns-shop-dark button[name=save_address], .btns-shop-dark button[name=track], .btns-shop-dark .single_add_to_cart_button, .btns-shop-dark .checkout_coupon .button, .btns-shop-dark #place_order, .btns-shop-dark .return-to-shop .button, .btns-shop-dark .cart-totals-inner .checkout-button, .btns-shop-dark .cart-actions .button[name=apply_coupon], .btns-shop-dark .register .button, .btns-shop-dark .login .button, .btns-shop-dark .lost_reset_password .button, .btns-shop-dark .social-login-btn > a, .btns-shop-dark .woocommerce-MyAccount-content > .button, .btns-shop-dark .order-again .button, .btns-shop-dark .woocommerce-Button--next, .btns-shop-dark .woocommerce-Button--previous, .btns-shop-dark .woocommerce-MyAccount-downloads-file, .btns-shop-dark .woodmart-pf-btn button, .btns-shop-dark .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-dark table.compare-list tr.add-to-cart td a, .btns-shop-dark .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-dark .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-dark .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-dark #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-dark #dokan-seller-listing-wrap .dokan-btn, .btns-shop-dark .woocommerce-MyAccount-content .dokan-btn, .btns-shop-dark .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
+.btns-shop-dark .hotspot-content .add_to_cart_button, .btns-shop-dark td.woocommerce-orders-table__cell-order-actions a, .btns-shop-dark .account-payment-methods-table .button, .btns-shop-dark .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a, .btns-shop-dark .product-list-item .woodmart-add-btn > a, .btns-shop-dark .woodmart-hover-standard .btn-add > a, .btns-shop-dark .popup-quick-view .woodmart-scroll-content > a, .btns-shop-dark .woodmart-sticky-btn .woodmart-sticky-add-to-cart, .btns-shop-dark .popup-added_to_cart .view-cart, .btns-shop-dark .widget_shopping_cart .buttons .checkout, .btns-shop-dark utton[name=save_account_details], .btns-shop-dark utton[name=save_address], .btns-shop-dark utton[name=track], .btns-shop-dark .single_add_to_cart_button, .btns-shop-dark .checkout_coupon .button, .btns-shop-dark #place_order, .btns-shop-dark .return-to-shop .button, .btns-shop-dark .cart-totals-inner .checkout-button, .btns-shop-dark .cart-actions .button[name=apply_coupon], .btns-shop-dark .register .button, .btns-shop-dark .login .button, .btns-shop-dark .lost_reset_password .button, .btns-shop-dark .social-login-btn > a, .btns-shop-dark .woocommerce-MyAccount-content > .button, .btns-shop-dark .order-again .button, .btns-shop-dark .woocommerce-Button--next, .btns-shop-dark .woocommerce-Button--previous, .btns-shop-dark .woocommerce-MyAccount-downloads-file, .btns-shop-dark .woodmart-pf-btn button, .btns-shop-dark .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart, .btns-shop-dark table.compare-list tr.add-to-cart td a, .btns-shop-dark .yith-woocompare-premium .compare-list .product_info .button, .btns-shop-dark .yith-woocompare-premium .compare-list .add-to-cart .button, .btns-shop-dark .yith-woocompare-premium .compare-list .added_to_cart, .btns-shop-dark #yith-woocompare-related .related-products .woocommerce > a, .btns-shop-dark #dokan-seller-listing-wrap .dokan-btn, .btns-shop-dark .woocommerce-MyAccount-content .dokan-btn, .btns-shop-dark .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button {
   color: #333333; }
 
-.btns-shop-hover-dark .hotspot-content .add_to_cart_button:hover, .btns-shop-hover-dark td.woocommerce-orders-table__cell-order-actions a:hover, .btns-shop-hover-dark .account-payment-methods-table .button:hover, .btns-shop-hover-dark .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:hover, .btns-shop-hover-dark .product-list-item .woodmart-add-btn > a:hover, .btns-shop-hover-dark .woodmart-hover-standard .btn-add > a:hover, .btns-shop-hover-dark .popup-quick-view .woodmart-scroll-content > a:hover, .btns-shop-hover-dark .woodmart-sticky-btn .woodmart-sticky-add-to-cart:hover, .btns-shop-hover-dark .popup-added_to_cart .view-cart:hover, .btns-shop-hover-dark .widget_shopping_cart .buttons .checkout:hover, .btns-shop-hover-dark button[name=save_account_details]:hover, .btns-shop-hover-dark button[name=save_address]:hover, .btns-shop-hover-dark button[name=track]:hover, .btns-shop-hover-dark .single_add_to_cart_button:hover, .btns-shop-hover-dark .checkout_coupon .button:hover, .btns-shop-hover-dark #place_order:hover, .btns-shop-hover-dark .return-to-shop .button:hover, .btns-shop-hover-dark .cart-totals-inner .checkout-button:hover, .btns-shop-hover-dark .cart-actions .button[name=apply_coupon]:hover, .btns-shop-hover-dark .register .button:hover, .btns-shop-hover-dark .login .button:hover, .btns-shop-hover-dark .lost_reset_password .button:hover, .btns-shop-hover-dark .social-login-btn > a:hover, .btns-shop-hover-dark .woocommerce-MyAccount-content > .button:hover, .btns-shop-hover-dark .order-again .button:hover, .btns-shop-hover-dark .woocommerce-Button--next:hover, .btns-shop-hover-dark .woocommerce-Button--previous:hover, .btns-shop-hover-dark .woocommerce-MyAccount-downloads-file:hover, .btns-shop-hover-dark .woodmart-pf-btn button:hover, .btns-shop-hover-dark .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:hover, .btns-shop-hover-dark table.compare-list tr.add-to-cart td a:hover, .btns-shop-hover-dark .yith-woocompare-premium .compare-list .product_info .button:hover, .btns-shop-hover-dark .yith-woocompare-premium .compare-list .add-to-cart .button:hover, .btns-shop-hover-dark .yith-woocompare-premium .compare-list .added_to_cart:hover, .btns-shop-hover-dark #yith-woocompare-related .related-products .woocommerce > a:hover, .btns-shop-hover-dark #dokan-seller-listing-wrap .dokan-btn:hover, .btns-shop-hover-dark .woocommerce-MyAccount-content .dokan-btn:hover, .btns-shop-hover-dark .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:hover {
+.btns-shop-hover-dark .hotspot-content .add_to_cart_button:hover, .btns-shop-hover-dark td.woocommerce-orders-table__cell-order-actions a:hover, .btns-shop-hover-dark .account-payment-methods-table .button:hover, .btns-shop-hover-dark .woodmart-hover-base:not(.product-in-carousel):not(.hover-width-small):not(.add-small-button) .woodmart-add-btn > a:hover, .btns-shop-hover-dark .product-list-item .woodmart-add-btn > a:hover, .btns-shop-hover-dark .woodmart-hover-standard .btn-add > a:hover, .btns-shop-hover-dark .popup-quick-view .woodmart-scroll-content > a:hover, .btns-shop-hover-dark .woodmart-sticky-btn .woodmart-sticky-add-to-cart:hover, .btns-shop-hover-dark .popup-added_to_cart .view-cart:hover, .btns-shop-hover-dark .widget_shopping_cart .buttons .checkout:hover, .btns-shop-hover-dark utton[name=save_account_details]:hover, .btns-shop-hover-dark utton[name=save_address]:hover, .btns-shop-hover-dark utton[name=track]:hover, .btns-shop-hover-dark .single_add_to_cart_button:hover, .btns-shop-hover-dark .checkout_coupon .button:hover, .btns-shop-hover-dark #place_order:hover, .btns-shop-hover-dark .return-to-shop .button:hover, .btns-shop-hover-dark .cart-totals-inner .checkout-button:hover, .btns-shop-hover-dark .cart-actions .button[name=apply_coupon]:hover, .btns-shop-hover-dark .register .button:hover, .btns-shop-hover-dark .login .button:hover, .btns-shop-hover-dark .lost_reset_password .button:hover, .btns-shop-hover-dark .social-login-btn > a:hover, .btns-shop-hover-dark .woocommerce-MyAccount-content > .button:hover, .btns-shop-hover-dark .order-again .button:hover, .btns-shop-hover-dark .woocommerce-Button--next:hover, .btns-shop-hover-dark .woocommerce-Button--previous:hover, .btns-shop-hover-dark .woocommerce-MyAccount-downloads-file:hover, .btns-shop-hover-dark .woodmart-pf-btn button:hover, .btns-shop-hover-dark .woocommerce table.wishlist_table td.product-add-to-cart .add_to_cart:hover, .btns-shop-hover-dark table.compare-list tr.add-to-cart td a:hover, .btns-shop-hover-dark .yith-woocompare-premium .compare-list .product_info .button:hover, .btns-shop-hover-dark .yith-woocompare-premium .compare-list .add-to-cart .button:hover, .btns-shop-hover-dark .yith-woocompare-premium .compare-list .added_to_cart:hover, .btns-shop-hover-dark #yith-woocompare-related .related-products .woocommerce > a:hover, .btns-shop-hover-dark #dokan-seller-listing-wrap .dokan-btn:hover, .btns-shop-hover-dark .woocommerce-MyAccount-content .dokan-btn:hover, .btns-shop-hover-dark .yith-ywraq-add-to-quote .yith-ywraq-add-button .button.add-request-quote-button:hover {
   color: #333333; }
 
 .main-nav .item-level-0.callto-btn > a:hover, .comment-form .submit:hover, .post-password-form input[type="submit"]:hover, .cookies-buttons .cookies-accept-btn:hover, div.open-table-widget .otw-button-wrap .otw-submit:hover,
@@ -25969,7 +26083,7 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
   -webkit-box-shadow: none;
           box-shadow: none; }
 
-.btns-accent-3d .main-nav .item-level-0.callto-btn > a, .btns-accent-3d .comment-form .submit, .btns-accent-3d .post-password-form input[type=submit], .btns-accent-3d .cookies-buttons .cookies-accept-btn, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-3d .mc4wp-form input[type=submit], .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-3d #yith-wpv-abuse, .btns-accent-3d div.wcmp_regi_main .button {
+.btns-accent-3d .main-nav .item-level-0.callto-btn > a, .btns-accent-3d .comment-form .submit, .btns-accent-3d .post-password-form input[type=submit], .btns-accent-3d .cookies-buttons .cookies-accept-btn, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-3d .mc4wp-form input[type=submit], .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-3d #yith-wpv-abuse, .btns-accent-3d iv.wcmp_regi_main .button {
   border: none;
   -webkit-box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
           box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
@@ -25978,30 +26092,30 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease,  -webkit-box-shadow 0s ease;
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, box-shadow 0s ease,  opacity 0.25s ease;
   transition: color 0.25s ease,  background-color 0.25s ease, border-color 0.25s ease, box-shadow 0s ease,  opacity 0.25s ease,  -webkit-box-shadow 0s ease; }
-  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-3d .comment-form .submit:hover, .btns-accent-3d .post-password-form input[type=submit]:hover, .btns-accent-3d .cookies-buttons .cookies-accept-btn:hover, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-3d .mc4wp-form input[type=submit]:hover, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-3d #yith-wpv-abuse:hover, .btns-accent-3d div.wcmp_regi_main .button:hover {
+  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-3d .comment-form .submit:hover, .btns-accent-3d .post-password-form input[type=submit]:hover, .btns-accent-3d .cookies-buttons .cookies-accept-btn:hover, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-3d .mc4wp-form input[type=submit]:hover, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-3d #yith-wpv-abuse:hover, .btns-accent-3d iv.wcmp_regi_main .button:hover {
     -webkit-box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15);
             box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.15); }
-  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:active, .btns-accent-3d .comment-form .submit:active, .btns-accent-3d .post-password-form input[type=submit]:active, .btns-accent-3d .cookies-buttons .cookies-accept-btn:active, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit:active, .btns-accent-3d div.open-table-widget .otw-button-wrap .otw-submit-btn:active, .btns-accent-3d .mc4wp-form input[type=submit]:active, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:active, .btns-accent-3d #yith-wpv-abuse:active, .btns-accent-3d div.wcmp_regi_main .button:active {
+  .btns-accent-3d .main-nav .item-level-0.callto-btn > a:active, .btns-accent-3d .comment-form .submit:active, .btns-accent-3d .post-password-form input[type=submit]:active, .btns-accent-3d .cookies-buttons .cookies-accept-btn:active, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit:active, .btns-accent-3d iv.open-table-widget .otw-button-wrap .otw-submit-btn:active, .btns-accent-3d .mc4wp-form input[type=submit]:active, .btns-accent-3d .woodmart-price-table .woodmart-plan-footer > a:active, .btns-accent-3d #yith-wpv-abuse:active, .btns-accent-3d iv.wcmp_regi_main .button:active {
     -webkit-box-shadow: none;
             box-shadow: none;
     top: 1px; }
 
-.btns-accent-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-rounded .comment-form .submit, .btns-accent-rounded .post-password-form input[type=submit], .btns-accent-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-rounded div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-rounded div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-rounded .mc4wp-form input[type=submit], .btns-accent-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-rounded #yith-wpv-abuse, .btns-accent-rounded div.wcmp_regi_main .button {
+.btns-accent-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-rounded .comment-form .submit, .btns-accent-rounded .post-password-form input[type=submit], .btns-accent-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-rounded iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-rounded iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-rounded .mc4wp-form input[type=submit], .btns-accent-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-rounded #yith-wpv-abuse, .btns-accent-rounded iv.wcmp_regi_main .button {
   border-radius: 35px; }
 
-.btns-accent-semi-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-semi-rounded .comment-form .submit, .btns-accent-semi-rounded .post-password-form input[type=submit], .btns-accent-semi-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-semi-rounded div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-semi-rounded div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-semi-rounded .mc4wp-form input[type=submit], .btns-accent-semi-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-semi-rounded #yith-wpv-abuse, .btns-accent-semi-rounded div.wcmp_regi_main .button {
+.btns-accent-semi-rounded .main-nav .item-level-0.callto-btn > a, .btns-accent-semi-rounded .comment-form .submit, .btns-accent-semi-rounded .post-password-form input[type=submit], .btns-accent-semi-rounded .cookies-buttons .cookies-accept-btn, .btns-accent-semi-rounded iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-semi-rounded iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-semi-rounded .mc4wp-form input[type=submit], .btns-accent-semi-rounded .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-semi-rounded #yith-wpv-abuse, .btns-accent-semi-rounded iv.wcmp_regi_main .button {
   border-radius: 5px; }
 
-.btns-accent-light .main-nav .item-level-0.callto-btn > a, .btns-accent-light .comment-form .submit, .btns-accent-light .post-password-form input[type=submit], .btns-accent-light .cookies-buttons .cookies-accept-btn, .btns-accent-light div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-light div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-light .mc4wp-form input[type=submit], .btns-accent-light .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-light #yith-wpv-abuse, .btns-accent-light div.wcmp_regi_main .button {
+.btns-accent-light .main-nav .item-level-0.callto-btn > a, .btns-accent-light .comment-form .submit, .btns-accent-light .post-password-form input[type=submit], .btns-accent-light .cookies-buttons .cookies-accept-btn, .btns-accent-light iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-light iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-light .mc4wp-form input[type=submit], .btns-accent-light .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-light #yith-wpv-abuse, .btns-accent-light iv.wcmp_regi_main .button {
   color: white; }
 
-.btns-accent-hover-light .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-light .comment-form .submit:hover, .btns-accent-hover-light .post-password-form input[type=submit]:hover, .btns-accent-hover-light .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-light div.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-light div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-light .mc4wp-form input[type=submit]:hover, .btns-accent-hover-light .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-light #yith-wpv-abuse:hover, .btns-accent-hover-light div.wcmp_regi_main .button:hover {
+.btns-accent-hover-light .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-light .comment-form .submit:hover, .btns-accent-hover-light .post-password-form input[type=submit]:hover, .btns-accent-hover-light .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-light iv.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-light iv.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-light .mc4wp-form input[type=submit]:hover, .btns-accent-hover-light .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-light #yith-wpv-abuse:hover, .btns-accent-hover-light iv.wcmp_regi_main .button:hover {
   color: white; }
 
-.btns-accent-dark .main-nav .item-level-0.callto-btn > a, .btns-accent-dark .comment-form .submit, .btns-accent-dark .post-password-form input[type=submit], .btns-accent-dark .cookies-buttons .cookies-accept-btn, .btns-accent-dark div.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-dark div.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-dark .mc4wp-form input[type=submit], .btns-accent-dark .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-dark #yith-wpv-abuse, .btns-accent-dark div.wcmp_regi_main .button {
+.btns-accent-dark .main-nav .item-level-0.callto-btn > a, .btns-accent-dark .comment-form .submit, .btns-accent-dark .post-password-form input[type=submit], .btns-accent-dark .cookies-buttons .cookies-accept-btn, .btns-accent-dark iv.open-table-widget .otw-button-wrap .otw-submit, .btns-accent-dark iv.open-table-widget .otw-button-wrap .otw-submit-btn, .btns-accent-dark .mc4wp-form input[type=submit], .btns-accent-dark .woodmart-price-table .woodmart-plan-footer > a, .btns-accent-dark #yith-wpv-abuse, .btns-accent-dark iv.wcmp_regi_main .button {
   color: #333333; }
 
-.btns-accent-hover-dark .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-dark .comment-form .submit:hover, .btns-accent-hover-dark .post-password-form input[type=submit]:hover, .btns-accent-hover-dark .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-dark div.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-dark div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-dark .mc4wp-form input[type=submit]:hover, .btns-accent-hover-dark .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-dark #yith-wpv-abuse:hover, .btns-accent-hover-dark div.wcmp_regi_main .button:hover {
+.btns-accent-hover-dark .main-nav .item-level-0.callto-btn > a:hover, .btns-accent-hover-dark .comment-form .submit:hover, .btns-accent-hover-dark .post-password-form input[type=submit]:hover, .btns-accent-hover-dark .cookies-buttons .cookies-accept-btn:hover, .btns-accent-hover-dark iv.open-table-widget .otw-button-wrap .otw-submit:hover, .btns-accent-hover-dark iv.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .btns-accent-hover-dark .mc4wp-form input[type=submit]:hover, .btns-accent-hover-dark .woodmart-price-table .woodmart-plan-footer > a:hover, .btns-accent-hover-dark #yith-wpv-abuse:hover, .btns-accent-hover-dark iv.wcmp_regi_main .button:hover {
   color: #333333; }
 
 @media (min-width: 1025px) {
@@ -26354,7 +26468,15 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
   .browser-Firefox .woodmart-woocommerce-layered-nav .has-scrollbar .swatches-display-list li,
   .browser-Edge .woodmart-woocommerce-layered-nav .has-scrollbar .swatches-display-list li,
   .browser-Internet .woodmart-woocommerce-layered-nav .has-scrollbar .swatches-display-list li {
-    margin-right: 9px; } }
+    margin-right: 9px; }
+
+  .products-bordered-grid .col-lg-12:first-child,
+  .products-bordered-grid .col-lg-6:nth-child(-n+2),
+  .products-bordered-grid .col-lg-4:nth-child(-n+3),
+  .products-bordered-grid .col-lg-3:nth-child(-n+4),
+  .products-bordered-grid .col-lg-20_0:nth-child(-n+5),
+  .products-bordered-grid .col-lg-2:nth-child(-n+6) {
+    border-top-width: 1px; } }
 @media (min-width: 1200px) {
   .hidden-lg {
     display: none !important; }
@@ -26793,20 +26915,27 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
       font-size: 12px;
       line-height: 12px; }
 
-  .woodmart-slider .owl-nav > div[class*="prev"], .woodmart-slider .owl-nav > div[class*="next"] {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
   .woodmart-slider .owl-nav > div[class*="prev"] {
     padding-left: 0; }
   .woodmart-slider .owl-nav > div[class*="next"] {
     padding-right: 0; }
+
+  .arrows-style-1 .owl-nav > div[class*="prev"] {
+    left: 0px; }
+  .arrows-style-1 .owl-nav > div[class*="next"] {
+    right: 0px; }
 
   .arrows-style-2 .owl-nav > div,
   .arrows-style-3 .owl-nav > div {
     width: 40px;
     height: 40px;
     margin-top: -20px; }
+    .arrows-style-2 .owl-nav > div[class*="prev"], .arrows-style-2 .owl-nav > div[class*="next"],
+    .arrows-style-3 .owl-nav > div[class*="prev"],
+    .arrows-style-3 .owl-nav > div[class*="next"] {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .arrows-style-2 .owl-nav > div:after,
     .arrows-style-3 .owl-nav > div:after {
       font-size: 14px;
@@ -27711,7 +27840,17 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
     .woodmart-dark .woocommerce-orders-table tr {
       border-color: rgba(255, 255, 255, 0.15); }
     .woodmart-dark .woocommerce-orders-table td:before {
-      color: white; } }
+      color: white; }
+
+  .products-bordered-grid .col-md-12:first-child,
+  .products-bordered-grid .col-md-6:nth-child(-n+2),
+  .products-bordered-grid .col-md-4:nth-child(-n+3),
+  .products-bordered-grid .col-md-3:nth-child(-n+4) {
+    border-top-width: 1px; } }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reset-margin-tablet > .vc_column-inner {
+    margin-left: 0 !important;
+    margin-right: 0 !important; } }
 @media (max-width: 991px) {
   .woodmart-title-width-70 .woodmart-title-container,
   .woodmart-title-width-70 .title-after_title,
@@ -28915,6 +29054,12 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
   .woodmart-highlighted-products:not(.with-title) .wrap-loading-arrow > div[class*="next"] {
     right: -14px !important; }
 
+  .products-bordered-grid.woodmart-spacing-20 .product, .products-bordered-grid.woodmart-spacing-30 .product {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .products-bordered-grid.woodmart-carousel-spacing-20 .owl-carousel-item, .products-bordered-grid.woodmart-carousel-spacing-30 .owl-carousel-item {
+    padding: 5px; }
+
   .single-product-page .woodmart-product-brands img {
     max-height: 36px; }
 
@@ -29126,7 +29271,8 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
     background-image: none !important; }
 
   body .reset-element-margin,
-  .reset-margin > .vc_column-inner {
+  .reset-margin > .vc_column-inner,
+  .reset-margin-mobile > .vc_column-inner {
     margin-left: 0 !important;
     margin-right: 0 !important; }
 
@@ -29242,7 +29388,12 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
     -ms-flex: 0 0 33.333333%;
     -webkit-box-flex: 0;
             flex: 0 0 33.333333%;
-    max-width: 33.333333%; } }
+    max-width: 33.333333%; }
+
+  .products-bordered-grid .col-sm-12:first-child,
+  .products-bordered-grid .col-sm-6:nth-child(-n+2),
+  .products-bordered-grid .col-sm-4:nth-child(-n+3) {
+    border-top-width: 1px; } }
 @media (max-width: 600px) {
   .admin-bar .whb-clone {
     top: 0; }
@@ -29455,6 +29606,13 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
     padding-right: 10px;
     padding-bottom: 10px; }
 
+  .product-grid-item .woodmart-stock-progress-bar .stock-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .product-grid-item .woodmart-stock-progress-bar .total-sold {
+    display: none; }
+
   .product-image-summary .product-images .labels-rounded {
     top: 10px;
     right: 10px; }
@@ -29518,4 +29676,8 @@ div.open-table-widget .otw-button-wrap .otw-submit-btn:hover, .mc4wp-form input[
       display: none; }
 
   .woodmart-sticky-btn-shown.scrollToTop {
-    bottom: 55px; } }
+    bottom: 55px; }
+
+  .products-bordered-grid .col-12:first-child,
+  .products-bordered-grid .col-6:nth-child(-n+2) {
+    border-top-width: 1px; } }

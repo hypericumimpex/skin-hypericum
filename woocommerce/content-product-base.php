@@ -66,6 +66,10 @@ do_action( 'woocommerce_before_shop_loop_item' ); ?>
 				<div class="woodmart-add-btn"><?php do_action( 'woocommerce_after_shop_loop_item' ); ?></div>
 				<div class="wrap-quickview-button"><?php woodmart_quick_view_btn( get_the_ID() ); ?></div>
 			</div>
+			<?php if ( woodmart_loop_prop( 'progress_bar' ) ): ?>
+				<?php woodmart_stock_progress_bar(); ?>
+			<?php endif ?>
+			
 			<?php if ( woodmart_loop_prop( 'timer' ) ): ?>
 				<?php woodmart_product_sale_countdown(); ?>
 			<?php endif ?>

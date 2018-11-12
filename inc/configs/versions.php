@@ -5,8 +5,13 @@
  * Array of versions for dummy content import section
  * ------------------------------------------------------------------------------------------------
  */
-
 return apply_filters( 'woodmart_get_versions_to_import', array(
+	'black-friday' => array(
+		'title' => 'Black Friday',
+		'process' => 'xml,home,options,widgets,sliders,headers',
+		'type' => 'version',
+		'sliders' => 'revslider'
+	),
 	'motorcycle' => array(
 		'title' => 'Motorcycle',
 		'process' => 'xml,home,options,widgets,wood_slider,headers',
@@ -618,7 +623,7 @@ return apply_filters( 'woodmart_get_versions_to_import', array(
 	),
 	'base' => array(
 		'title' => 'Base content (required)',
-		'process' => 'xml,home,shop,menu,widgets,options,sliders,before,after,headers',
+		'process' => 'xml,home,shop,menu,widgets,options,sliders,wood_slider,before,after,headers',
 		'type' => 'base',
 		'sliders' => 'revslider,revslider2',
 	),

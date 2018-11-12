@@ -81,5 +81,6 @@ return apply_filters( 'woodmart_get_reset_options_version', array(
 	'single_post_design',
 	'single_post_header',
 
-	'multi_custom_fonts'
+	'multi_custom_fonts',
+	'advanced_typography'
 ) );

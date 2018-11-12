@@ -343,12 +343,14 @@ var wooFile = false;
 				$('div[data-owl-carousel]:not(.scroll-init)').each(function () {
                     owlInit($(this));
 				});
-				
-				$('div[data-owl-carousel].scroll-init').waypoint(function () {
-					owlInit($(this));
-				}, {
-					offset: '100%'
-				});
+
+				if (typeof ($.fn.waypoint) != 'undefined') {
+					$('div[data-owl-carousel].scroll-init').waypoint(function () {
+						owlInit($(this));
+					}, {
+							offset: '100%'
+						});
+				}
 
                 function owlInit($this) {
                     var $owl = $this.find('.owl-carousel');
